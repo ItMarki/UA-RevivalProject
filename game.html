@@ -9,39 +9,39 @@
 	<script type="text/javascript" src="javascripts/cheat.js"></script>
 </head>
 <body onload='gameInit()'>
-	<NOSCRIPT><table style='position:fixed; height:100%; width:100%; background-color:#E5E5E5; color:#191919; text-align:center; z-index:1'><tr><td>You have to enable JavaScript to play!</td></tr></table></NOSCRIPT>
-	<div id='starsRow' style='position:relative'><tooltip id='starsExplanation' malign='bottom' disabled=true><b id='stars'>10</b> stars</tooltip>
-		<div class='supernovaTab' id='unstableStars' style='position:absolute;right:0;bottom:0;width:initial;font-size:12px;display:none'>0 unstable</div>
+	<NOSCRIPT><table style='position:fixed; height:100%; width:100%; background-color:#E5E5E5; color:#191919; text-align:center; z-index:1'><tr><td>你要啓動JavaScript，才可以玩！</td></tr></table></NOSCRIPT>
+	<div id='starsRow' style='position:relative'><tooltip id='starsExplanation' malign='bottom' disabled=true><b id='stars'>10</b>恆星</tooltip>
+		<div class='supernovaTab' id='unstableStars' style='position:absolute;right:0;bottom:0;width:initial;font-size:12px;display:none'>0不穩定</div>
 	</div>
-	<div id='sPSRow'><tooltip id='sPSExplanation' malign='bottom' disabled=true><b id='sPS'>0</b> stars/s</tooltip></div>
+	<div id='sPSRow'><tooltip id='sPSExplanation' malign='bottom' disabled=true><b id='sPS'>0</b> 每秒恆星</tooltip></div>
 	<div class='tabs'><table id='prestigePoints' style='display:none;width:100%'><tr><td><tooltip id='transferPoints' malign='bottom' disabled=true></tooltip></td>
 		<td id='neutronStars' style='display:none'><tooltip id='neutronStars' malign='bottom' disabled=true></tooltip></td>
 		<td id='quarkStars' style='display:none'><tooltip id='quarkStars' malign='bottom' disabled=true></tooltip></td></tr></table></div>
-	<div class='tabs' id='tabsScroll'><table id='tabs'><tr><td><button class='longButton' onClick='switchTab("gen")'>Generators</button></td>
-	<td><button class='evenButton' onClick='switchTab("milestones")'>Milestones</button></td>
-	<td><button class='longButton' onClick='switchTab("statistics")'>Statistics</button></td>
-	<td><button class='evenButton' onClick='switchTab("options")'>Options</button></td>
-	<td id='transferTabButton' style='display:none'><button class='longButton' onClick='switchTab("transfer")'>Transfer</button></td>
-	<td id='supernovaTabButton' style='display:none'><button class='supernovaButton' onClick='switchTab("supernova")'>Supernova</button></td>
-	<td id='hypernovaTabButton' style='display:none'><button class='hypernovaButton' onClick='switchTab("hypernova")'>Hypernova</button></td>
-	<td id='exoticTabButton' style='display:none'><button class='exoticButton' onClick='switchTab("exotic")'>Exotic</button></td>
-	<td id='quantumTabButton' style='display:none'><button class='quantumButton' onClick='switchTab("quantum")'>Quantum</button></td>
+	<div class='tabs' id='tabsScroll'><table id='tabs'><tr><td><button class='longButton' onClick='switchTab("gen")'>生產器</button></td>
+	<td><button class='evenButton' onClick='switchTab("milestones")'>里程碑</button></td>
+	<td><button class='longButton' onClick='switchTab("statistics")'>統計</button></td>
+	<td><button class='evenButton' onClick='switchTab("options")'>選項</button></td>
+	<td id='transferTabButton' style='display:none'><button class='longButton' onClick='switchTab("transfer")'>轉移</button></td>
+	<td id='supernovaTabButton' style='display:none'><button class='supernovaButton' onClick='switchTab("supernova")'>超新星</button></td>
+	<td id='hypernovaTabButton' style='display:none'><button class='hypernovaButton' onClick='switchTab("hypernova")'>極超新星</button></td>
+	<td id='exoticTabButton' style='display:none'><button class='exoticButton' onClick='switchTab("exotic")'>奇異</button></td>
+	<td id='quantumTabButton' style='display:none'><button class='quantumButton' onClick='switchTab("quantum")'>量子</button></td>
 	<td><button class='longButton' onClick='switchTab("cheat")' style='display:inline-block'>Cheat</button></td></tr></table></div>
-	<div class='tabs'><table id='tabsCustomScrolling' style='display:none'><tr><td><button class='longButton' onClick='leftScroll("tabsScroll")'>Scroll left</button></td><td><button class='evenButton' onClick='rightScroll("tabsScroll")'>Scroll right</button></td></tr></table></div>
+	<div class='tabs'><table id='tabsCustomScrolling' style='display:none'><tr><td><button class='longButton' onClick='leftScroll("tabsScroll")'>Scroll left</button></td><td><button class='evenButton' onClick='rightScroll("tabsScroll")'>向右滾動</button></td></tr></table></div>
 	<br>
 	<div id='tabgen'>
-		<div class='tabs' id='genTabsScroll'><table id='genTabs' style='display:none'><tr id='genTabsRow'><td><button class='longButton' onClick='switchGenTab("tiers")'>Tiers</button></td>
-		<td id='supernovaLockedTab4' style='display:none'><button class='supernovaButton' onClick='switchGenTab("neutronTiers")'>Neutron tiers</button></td></tr></table></div>
-		<div class='tabs'><table id='genTabsCustomScrolling' style='display:none'><tr><td><button class='longButton' onClick='leftScroll("genTabsScroll")'>Scroll left</button></td><td><button class='evenButton' onClick='rightScroll("genTabsScroll")'>Scroll right</button></td></tr></table></div>
+		<div class='tabs' id='genTabsScroll'><table id='genTabs' style='display:none'><tr id='genTabsRow'><td><button class='longButton' onClick='switchGenTab("tiers")'>階級</button></td>
+		<td id='supernovaLockedTab4' style='display:none'><button class='supernovaButton' onClick='switchGenTab("neutronTiers")'>中子階級</button></td></tr></table></div>
+		<div class='tabs'><table id='genTabsCustomScrolling' style='display:none'><tr><td><button class='longButton' onClick='leftScroll("genTabsScroll")'>Scroll left</button></td><td><button class='evenButton' onClick='rightScroll("genTabsScroll")'>向右滾動</button></td></tr></table></div>
 		<div class='center' id='gentiers'>
 			<table style="width:100%; padding:0; display:table" id='layout1'>
 				<tr>
 					<td style='max-width:100%'></td>
-					<td style='width:192px'><button id='maxAll' class='longButton' onClick='maxAll()'>Max all</button></td>
+					<td style='width:192px'><button id='maxAll' class='longButton' onClick='maxAll()'>最大全部</button></td>
 				</tr>
 				<tr>
-					<td style='text-align:left' id='t1Gen'><tooltip id='t1Gen' malign='left'><b>Tier 1 generator</b><br>0</tooltip></td>
-					<td><button class='longButton' id='t1GenButton' onClick='buyGen(1,notOnShift)'>Click here!</button></td>
+					<td style='text-align:left' id='t1Gen'><tooltip id='t1Gen' malign='left'><b>第一級生產器</b><br>0</tooltip></td>
+					<td><button class='longButton' id='t1GenButton' onClick='buyGen(1,notOnShift)'>按在這裏！</button></td>
 				</tr>
 				<tr id='t2GenRow' style='display:none'>
 					<td style='text-align:left' id='t2Gen'><tooltip id='t2Gen' malign='left'></tooltip></td>
