@@ -26,13 +26,13 @@
 	<td id='hypernovaTabButton' style='display:none'><button class='hypernovaButton' onClick='switchTab("hypernova")'>極超新星</button></td>
 	<td id='exoticTabButton' style='display:none'><button class='exoticButton' onClick='switchTab("exotic")'>奇異</button></td>
 	<td id='quantumTabButton' style='display:none'><button class='quantumButton' onClick='switchTab("quantum")'>量子</button></td>
-	<td><button class='longButton' onClick='switchTab("cheat")' style='display:inline-block'>Cheat</button></td></tr></table></div>
-	<div class='tabs'><table id='tabsCustomScrolling' style='display:none'><tr><td><button class='longButton' onClick='leftScroll("tabsScroll")'>Scroll left</button></td><td><button class='evenButton' onClick='rightScroll("tabsScroll")'>向右滾動</button></td></tr></table></div>
+	<td><button class='longButton' onClick='switchTab("cheat")' style='display:inline-block'>作弊</button></td></tr></table></div>
+	<div class='tabs'><table id='tabsCustomScrolling' style='display:none'><tr><td><button class='longButton' onClick='leftScroll("tabsScroll")'>向左滾動</button></td><td><button class='evenButton' onClick='rightScroll("tabsScroll")'>向右滾動</button></td></tr></table></div>
 	<br>
 	<div id='tabgen'>
 		<div class='tabs' id='genTabsScroll'><table id='genTabs' style='display:none'><tr id='genTabsRow'><td><button class='longButton' onClick='switchGenTab("tiers")'>階級</button></td>
 		<td id='supernovaLockedTab4' style='display:none'><button class='supernovaButton' onClick='switchGenTab("neutronTiers")'>中子階級</button></td></tr></table></div>
-		<div class='tabs'><table id='genTabsCustomScrolling' style='display:none'><tr><td><button class='longButton' onClick='leftScroll("genTabsScroll")'>Scroll left</button></td><td><button class='evenButton' onClick='rightScroll("genTabsScroll")'>向右滾動</button></td></tr></table></div>
+		<div class='tabs'><table id='genTabsCustomScrolling' style='display:none'><tr><td><button class='longButton' onClick='leftScroll("genTabsScroll")'>向左滾動</button></td><td><button class='evenButton' onClick='rightScroll("genTabsScroll")'>向右滾動</button></td></tr></table></div>
 		<div class='center' id='gentiers'>
 			<table style="width:100%; padding:0; display:table" id='layout1'>
 				<tr>
@@ -490,7 +490,7 @@
 				<td id='statsRewardBoxesValue' style='width:240px'></td>
 			</tr>
 			<tr id='statsTotalNeutrons'>
-				<td style='text-align:left'><b>總共獲得的中子Total neutrons gained:</b></td>
+				<td style='text-align:left'><b>總共獲得的中子:</b></td>
 				<td id='statsTotalNeutronsValue' style='width:240px'></td>
 			</tr>
 		</table>
@@ -537,45 +537,45 @@
 	<div class='center' id='tabtransfer' style='display:none'>
 		<table style="width:100%; padding:0">
 			<tr>
-				<td style='width:25%'><tooltip class='center' id='tupg2'>基於你的遊玩時間，增強生產力<br><button id='tupg2button' class='shopUnafford' onClick='buyTransferUpgrade(2)'>Cost: 1 TP</button></tooltip></td>
-				<td style='width:25%'><tooltip class='center' id='tupg3'>Increase production based on your playtime this transfer<br><button id='tupg3button' class='shopUnafford' onClick='buyTransferUpgrade(3)'>Cost: 3 TP</button></tooltip></td>
-				<td style='width:25%'><tooltip class='center' id='tupg1'>x1.02 bonus for every OoM of generator amount<br><button id='tupg1button' class='longButton' onClick='buyTransferUpgrade(1)'>Cost: 6 TP</button></tooltip></td>
-				<td style='width:25%'><tooltip class='center' id='tupg4'>Increase production based on your highest prestige power<br><button id='tupg4button' class='shopUnafford' onClick='buyTransferUpgrade(4)'>Cost: 10 TP</button></tooltip></td>
+				<td style='width:25%'><tooltip class='center' id='tupg2'>基於你的遊玩時間，增強生產力<br><button id='tupg2button' class='shopUnafford' onClick='buyTransferUpgrade(2)'>成本: 1 轉移點數</button></tooltip></td>
+				<td style='width:25%'><tooltip class='center' id='tupg3'>基於你在本次轉移的時間，增強生產力<br><button id='tupg3button' class='shopUnafford' onClick='buyTransferUpgrade(3)'>成本: 3 轉移點數</button></tooltip></td>
+				<td style='width:25%'><tooltip class='center' id='tupg1'>每個生產力的數量級，就增強1.02倍<br><button id='tupg1button' class='longButton' onClick='buyTransferUpgrade(1)'>成本: 6 轉移點數</button></tooltip></td>
+				<td style='width:25%'><tooltip class='center' id='tupg4'>基於你最大的聲望力量，增強生產力<br><button id='tupg4button' class='shopUnafford' onClick='buyTransferUpgrade(4)'>成本: 10 轉移點數</button></tooltip></td>
 			</tr>
 			<tr>
-				<td><tooltip class='center' id='tupg5'>Increase production based on your highest transfer points<br><button id='tupg5button' class='shopUnafford' onClick='buyTransferUpgrade(5)'>Cost: 15 TP</button></tooltip></td>
-				<td><tooltip class='center' id='tupg6'>Increase prestige power gain based on prestige power<br><button id='tupg6button' class='shopUnafford' onClick='buyTransferUpgrade(6)'>Cost: 25 TP</button></tooltip></td>
-				<td><tooltip class='center' id='tupg7'>Prestige starts 2 OoMs earlier (1e37 stars)<br><button id='tupg7button' class='shopUnafford' onClick='buyTransferUpgrade(7)'>Cost: 35 TP</button></tooltip></td>
-				<td><tooltip class='center' id='tupg8'>Reduce the tier 10 generator price increase<br><button id='tupg8button' class='shopUnafford' onClick='buyTransferUpgrade(8)'>Cost: 50 TP</button></tooltip></td>
+				<td><tooltip class='center' id='tupg5'>基於你最大的轉移點數，增強生產力<br><button id='tupg5button' class='shopUnafford' onClick='buyTransferUpgrade(5)'>成本: 15 轉移點數</button></tooltip></td>
+				<td><tooltip class='center' id='tupg6'>基於聲望力量，增加聲望力量獲得數<br><button id='tupg6button' class='shopUnafford' onClick='buyTransferUpgrade(6)'>成本: 25 轉移點數</button></tooltip></td>
+				<td><tooltip class='center' id='tupg7'>聲望早兩個數量級(1e37 恆星)<br><button id='tupg7button' class='shopUnafford' onClick='buyTransferUpgrade(7)'>成本: 35 轉移點數</button></tooltip></td>
+				<td><tooltip class='center' id='tupg8'>減少第十級生產器的價格增加<br><button id='tupg8button' class='shopUnafford' onClick='buyTransferUpgrade(8)'>成本: 50 轉移點數</button></tooltip></td>
 			</tr>
 			<tr>
-				<td><tooltip class='center' id='tupg9'>Prestige power gain is doubled<br><button id='tupg9button' class='shopUnafford' onClick='buyTransferUpgrade(9)'>Cost: 100 TP</button></tooltip></td>
-				<td><tooltip class='center' id='tupg10'>Buying tier 10 generators gives 1.07x bonus<br><button id='tupg10button' class='shopUnafford' onClick='buyTransferUpgrade(10)'>Cost: 250 TP</button></tooltip></td>
-				<td><tooltip class='center' id='tupg11'>Buying tier 5 generators increases all production by 0.145%<br><button id='tupg11button' class='shopUnafford' onClick='buyTransferUpgrade(11)'>Cost: 500 TP</button></tooltip></td>
-				<td><tooltip class='center' id='tupg12'>Production is multiplied by x3<br><button id='tupg12button' class='shopUnafford' onClick='buyTransferUpgrade(12)'>Cost: 1000 TP</button></tooltip></td>
+				<td><tooltip class='center' id='tupg9'>聲望力量獲得數翻倍<br><button id='tupg9button' class='shopUnafford' onClick='buyTransferUpgrade(9)'>成本: 100 轉移點數</button></tooltip></td>
+				<td><tooltip class='center' id='tupg10'>每購買一個第十級生產器，就增強1.07倍<br><button id='tupg10button' class='shopUnafford' onClick='buyTransferUpgrade(10)'>成本: 250 轉移點數</button></tooltip></td>
+				<td><tooltip class='center' id='tupg11'>每購買一個第五級生產器，全部生產器增強0.145%<br><button id='tupg11button' class='shopUnafford' onClick='buyTransferUpgrade(11)'>成本: 500 轉移點數</button></tooltip></td>
+				<td><tooltip class='center' id='tupg12'>生產力三倍<br><button id='tupg12button' class='shopUnafford' onClick='buyTransferUpgrade(12)'>成本: 1000 轉移點數</button></tooltip></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><tooltip class='center' id='tupg13'>Increase prestige power gain based on transfer points<br><button id='tupg13button' class='lockedUpgrade' onClick='buyTransferUpgrade(13)'>Cost: 3000 TP</button></tooltip></td>
-				<td><tooltip class='center' id='tupg14'>Increase transfer point gain based on prestige power<br><button id='tupg14button' class='lockedUpgrade' onClick='buyTransferUpgrade(14)'>Cost: 5000 TP</button></tooltip></td>
+				<td><tooltip class='center' id='tupg13'>基於轉移點數，增加聲望力量獲得數<br><button id='tupg13button' class='lockedUpgrade' onClick='buyTransferUpgrade(13)'>成本: 3000 轉移點數</button></tooltip></td>
+				<td><tooltip class='center' id='tupg14'>基於聲望力量，增加轉移點數獲得數<br><button id='tupg14button' class='lockedUpgrade' onClick='buyTransferUpgrade(14)'>成本: 5000 轉移點數</button></tooltip></td>
 				<td></td>
 			</tr>
 		</table>
-		<div class='center' style='opacity:0.5'>You can hover a bought upgrade to see your current multiplier for that upgrade.</div>
+		<div class='center' style='opacity:0.5'>你可以將鼠標放上已購買的升級，可以看其倍數。</div>
 	</div>
 	<div class='supernovaTab' id='tabsupernova' style='display:none'>
-		<div class='tabs' id='supernovaTabsScroll'><table id='supernovaTabs'><tr id='supernovaTabsRow'><td><button class='longButton' id='supernovaUpgradesTabButton' onClick='switchSNTab("upgrades")'>Upgrades</button></td>
-		<td><button class='evenButton' onClick='switchSNTab("achievements")'>Achievements</button></td>
-		<td id='autobuyerTab'><button class='longButton' onClick='switchSNTab("autobuyers")'>Autobuyers</button></td>
-		<td id='supernovaLockedTab1'><button class='evenButton' onClick='switchSNTab("challenges")'>Challenges</button></td>
-		<td id='supernovaLockedTab2'><button class='longButton' id='buyinshopTabButton' onClick='switchSNTab("buyinshop")'>Buyinshop</button></td>
-		<td id='supernovaLockedTab3'><button class='evenButton' id='neutronBoostTabButton' onClick='switchSNTab("neutronboosts")'>Neutron boosts</button></td>
-		<td id='supernovaLockedTab5'><button class='longButton' onClick='switchSNTab("destabilization")'>Destabilization</button></td>
-		<td id='supernovaLockedTab6'><button class='evenButton' onClick='switchSNTab("aliens")'>Aliens</button></td>
+		<div class='tabs' id='supernovaTabsScroll'><table id='supernovaTabs'><tr id='supernovaTabsRow'><td><button class='longButton' id='supernovaUpgradesTabButton' onClick='switchSNTab("upgrades")'>升級</button></td>
+		<td><button class='evenButton' onClick='switchSNTab("achievements")'>成就</button></td>
+		<td id='autobuyerTab'><button class='longButton' onClick='switchSNTab("autobuyers")'>自動購買</button></td>
+		<td id='supernovaLockedTab1'><button class='evenButton' onClick='switchSNTab("challenges")'>挑戰</button></td>
+		<td id='supernovaLockedTab2'><button class='longButton' id='buyinshopTabButton' onClick='switchSNTab("buyinshop")'>購購商店Buyinshop</button></td>
+		<td id='supernovaLockedTab3'><button class='evenButton' id='neutronBoostTabButton' onClick='switchSNTab("neutronboosts")'>中子加成</button></td>
+		<td id='supernovaLockedTab5'><button class='longButton' onClick='switchSNTab("destabilization")'>不穩定化</button></td>
+		<td id='supernovaLockedTab6'><button class='evenButton' onClick='switchSNTab("aliens")'>外星人</button></td>
 		<td id='requirementChild'><button class='lockedUpgrade' id='requirement'></button></td></tr></table></div>
-		<div class='tabs'><table id='supernovaTabsCustomScrolling'><tr><td><button class='longButton' onClick='leftScroll("supernovaTabsScroll")'>Scroll left</button></td><td><button class='evenButton' onClick='rightScroll("supernovaTabsScroll")'>Scroll right</button></td></tr></table></div>
+		<div class='tabs'><table id='supernovaTabsCustomScrolling'><tr><td><button class='longButton' onClick='leftScroll("supernovaTabsScroll")'>向左滾動</button></td><td><button class='evenButton' onClick='rightScroll("supernovaTabsScroll")'>向右滾動</button></td></tr></table></div>
 		<div class='center' id='supernovaupgrades'>
-			<button class='optionButton' id='headstart' onClick='toggle("headstarts")'>Headstart:<br>On</button>
+			<button class='optionButton' id='headstart' onClick='toggle("headstarts")'>起先優勢:<br>開</button>
 			<table style="width:100%; padding:0">
 				<tr>
 					<td style='width:25%'><tooltip class='center' id='snupg1'>Increase production based on your total generators purchased<br><button id='snupg1button' class='supernovaButton' onClick='buySupernovaUpgrade(1)'>Cost: 1 NS</button></tooltip></td>
