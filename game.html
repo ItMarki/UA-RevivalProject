@@ -944,14 +944,14 @@
 			<div id='neutronBoostPower' style='text-align:center'></div>
 			<table align=center style="width:100%; padding:0">
 				<tr>
-					<td style='width:25%'><tooltip id='NBPowerStarsExplanation'><div class='center' id='powerStars'>Power (stars): +0</div><button id='powerStarsCost' class='supernovaButton' onclick='buyBoost(1)'>Cost: 1</button></tooltip></td>
-					<td style='width:25%'><tooltip id='NBPowerTPExplanation'><div class='center' id='powerTP'>Power (transfer points): +0</div><button id='powerTPCost' class='supernovaButton' onclick='buyBoost(2)'>Cost: 1 TP</button></tooltip></td>
-					<td style='width:25%'><tooltip id='NBPowerNSExplanation'><div class='center' id='powerNS'>Power (neutron stars): +0</div><button id='powerNSCost' class='supernovaButton' onclick='buyBoost(3)'>Cost: 1 NS</button></tooltip></td>
-					<td style='width:25%'><tooltip id='NBBaseExplanation'><div class='center' id='basePower'>Base: 10</div><button id='basePowerCost' class='supernovaButton' onclick='buyBoost(4)'>Cost: 1 NS</button></tooltip></td>
+					<td style='width:25%'><tooltip id='NBPowerStarsExplanation'><div class='center' id='powerStars'>力量(恆星): +0</div><button id='powerStarsCost' class='supernovaButton' onclick='buyBoost(1)'>成本: 1</button></tooltip></td>
+					<td style='width:25%'><tooltip id='NBPowerTPExplanation'><div class='center' id='powerTP'>力量(轉移點數): +0</div><button id='powerTPCost' class='supernovaButton' onclick='buyBoost(2)'>成本: 1 轉移點數</button></tooltip></td>
+					<td style='width:25%'><tooltip id='NBPowerNSExplanation'><div class='center' id='powerNS'力量(中子星): +0</div><button id='powerNSCost' class='supernovaButton' onclick='buyBoost(3)'>成本: 1 中子星</button></tooltip></td>
+					<td style='width:25%'><tooltip id='NBBaseExplanation'><div class='center' id='basePower'>基數: 10</div><button id='basePowerCost' class='supernovaButton' onclick='buyBoost(4)'>成本: 1 中子星</button></tooltip></td>
 				</tr>
 				<tr>
 					<td></td>
-					<td colspan=2><tooltip id='NBPPPowerExplanation'><div class='center' id='ppPower'>Power for prestige power increase: 0</div><button id='ppPowerCost' class='supernovaButton' onclick='buyBoost(5)'>Cost: 1 NS</button></tooltip></td>
+					<td colspan=2><tooltip id='NBPPPowerExplanation'><div class='center' id='ppPower'>聲望力量冪的增加: 0</div><button id='ppPowerCost' class='supernovaButton' onclick='buyBoost(5)'>成本: 1 中子星</button></tooltip></td>
 					<td></td>
 				</tr>
 			</table>
@@ -959,17 +959,17 @@
 		<div class='center' id='supernovadestabilization' style='display:none'>
 			<div id='destabilizationStatus' style='text-align:center;font-size:24px'></div>
 			<div id='destabilizationInfo' style='text-align:center'></div>
-			<button class='supernovaButton' id='destabilizationActivation' style='width:240px;height:36px' onclick='checkToReset(-1)'>Activate Destabilization!</button>
+			<button class='supernovaButton' id='destabilizationActivation' style='width:240px;height:36px' onclick='checkToReset(-1)'>啓動不穩定化！</button>
 			<table id='destabilizationUpgrades' align=center style="width:100%; padding:0">
 				<tr>
-					<td style='width:25%'><div id='destabilizationInterval' class='center'>Interval: 5 seconds</div><button id='destabilizationUpg1button' class='supernovaButton' onclick='buyDestabilizationUpg(1)'>Cost: ??? NS</button></td>
-					<td style='width:25%'><div id='destabilizationTime' class='center'>Time: 5 hours</div><button id='destabilizationUpg2button' class='shopUnafford' onclick='buyDestabilizationUpg(2)'>Cost: ??? NS</button></td>
-					<td style='width:25%'><div id='destabilizationPercentage' class='center'>Logarithmically percentage of unstable stars after activation: 90%</div><button id='destabilizationUpg3button' class='shopUnafford' onclick='buyDestabilizationUpg(3)'>Cost: ??? NS</button></td>
-					<td style='width:25%'>Unlock prestige on destabilizing, but shortens destabilizing when you prestige<button id='destabilizationUpg4button' class='shopUnafford' onclick='buyDestabilizationUpg(4)'>Cost: ??? NS</button></td>
+					<td style='width:25%'><div id='destabilizationInterval' class='center'>間隔: 5 秒</div><button id='destabilizationUpg1button' class='supernovaButton' onclick='buyDestabilizationUpg(1)'>成本: ??? 中子星</button></td>
+					<td style='width:25%'><div id='destabilizationTime' class='center'>時間: 5 小時</div><button id='destabilizationUpg2button' class='shopUnafford' onclick='buyDestabilizationUpg(2)'>成本: ??? 中子星</button></td>
+					<td style='width:25%'><div id='destabilizationPercentage' class='center'>開啓後的不穩定恆星的對數百分比: 90%</div><button id='destabilizationUpg3button' class='shopUnafford' onclick='buyDestabilizationUpg(3)'>Cost: ??? 中子星</button></td>
+					<td style='width:25%'>在不穩定化中解鎖聲望，但在聲望的時候，縮短不穩定化<button id='destabilizationUpg4button' class='shopUnafford' onclick='buyDestabilizationUpg(4)'>Cost: ??? 中子星</button></td>
 				</tr>
 			</table><br>
 			<b id='destabilizationWarning' style='text-align:center'></b><br>
-			<div style='text-align:center;opacity:0.5'>This machine was designed by IkerStream.</div>
+			<div style='text-align:center;opacity:0.5'>這個機器的創作人是IkerStream。</div>
 		</div>
 		<div class='center' id='supernovaaliens' style='display:none'>
 			<div id='aliens' style='text-align:center;font-size:24px'></div>
