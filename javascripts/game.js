@@ -3224,7 +3224,7 @@ function gameTick() {
 			hideElement('snupg16row')
 			if (player.supernovaUpgrades.includes(3)) if (player.supernovaTabsUnlocked>2) if (player.headstarts&&player.currentChallenge==0&&!player.preSupernova) {
 				showElement('snupg16row','table-row')
-				var ppHeadstartMessage='You start with <b>x'+format(ppHeadstart)+'</b> prestige power after transferring or supernova.'
+				var ppHeadstartMessage='你在轉移或超新星後有<b>x'+format(ppHeadstart)+'</b>聲望力量。'
 				updateElement('ppHeadstartUpg1','<b>Normal subformula</b>: x'+format(player.neutronStars)+'<sup>min(max('+format(player.neutronStars.log10(),2,1,false)+',5),'+(12.5+0.05*player.ppHeadstartUpgrades[0]).toPrecision(4)+')</sup> =<br>x'+format(ppHSValue1))
 				updateElement('ppHeadstartUpg2','<b>Pre-break limit</b>: x'+format(ppHSPreBreakLimit))
 				updateElement('ppHeadstartUpg3','<b>Post-break subformula</b>: x'+format(player.prestigePeak[0])+'<sup>'+(1-1/(player.ppHeadstartUpgrades[2]+10)).toPrecision(2)+'</sup> = x'+format(ppHSValue2))
