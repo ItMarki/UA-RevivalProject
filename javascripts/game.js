@@ -1530,13 +1530,13 @@ function showMilestone(id,isAch) {
     clearTimeout(showMilestoneTimeout)
     showMilestoneTimeout=setTimeout(function(){milestoneBox.style.transform='translate(-100%,0%)';},6000)
 	if (isAch) {
-		updateElement('milestoneMessage','Achievement unlocked!')
+		updateElement('milestoneMessage','獲得成就！')
 		updateElement('milestoneRequirement',achList.names[id-1])
 		updateElement('milestoneCheck',achList.requirements[id-1])
 	} else {
-		updateElement('milestoneMessage','Milestone got!')
+		updateElement('milestoneMessage','獲得里程碑！')
 		updateElement('milestoneRequirement',milestoneRequirements[id-1])
-		updateElement('milestoneCheck','Check in the milestones tab.')
+		updateElement('milestoneCheck','在里程碑表格裏看。')
 	}
 	updateMilestones()
 }
@@ -1559,13 +1559,13 @@ function switchTab(tabName) {
 
 function switchTheme() {
 	if (player.theme=='Normal') {
-		player.theme='Light'
+		player.theme='光亮'
 	} else if (player.theme=='Light') {
-		player.theme='Original'
+		player.theme='原版'
 	} else if (player.theme=='Original') {
-		player.theme='Colorblind'
+		player.theme='色盲'
 	} else {
-		player.theme='Normal'
+		player.theme='普通'
 	}
 	updateTheme(player.theme)
 }
