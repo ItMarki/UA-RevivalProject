@@ -1498,7 +1498,7 @@ function updateMilestones() {
 		} else {
 			var message=''
 			showElement('milestone'+temp,'table-row')
-			updateElement('ms'+temp+'requirement','<b>Milestone #'+temp+'</b>:<br>'+milestoneRequirements[temp-1])
+			updateElement('ms'+temp+'requirement','<b>里程碑'+temp+'</b>:<br>'+milestoneRequirements[temp-1])
 			var msCompletion='ms'+temp+'completion'
 			if (player.milestones>=temp) {
 				updateElement(msCompletion,message+'已完成'+((player.storyEnabled&&storyMessages.length>=temp)?'<br><b>Story</b>: '+storyMessages[temp-1]:''))
