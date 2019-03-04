@@ -2844,7 +2844,7 @@ function gameTick() {
 			}
 			if (player.prestigePower.gt(1)) {
 				showElement('tooltipBaseprestigePower','inline')
-				updateTooltipBase('prestigePower','<b>x'+format(player.prestigePower,3,0,false)+'</b> (prestige power) for all generator production<br>')
+				updateTooltipBase('prestigePower','<b>x'+format(player.prestigePower,3,0,false)+'</b> (聲望力量)，給予全部生產器生產力<br>')
 				if (player.explanations) {
 					enableTooltip('prestigePower')
 					updateTooltip('prestigePower',explainList.prestige)
