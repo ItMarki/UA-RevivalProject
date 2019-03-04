@@ -1501,10 +1501,10 @@ function updateMilestones() {
 			updateElement('ms'+temp+'requirement','<b>Milestone #'+temp+'</b>:<br>'+milestoneRequirements[temp-1])
 			var msCompletion='ms'+temp+'completion'
 			if (player.milestones>=temp) {
-				updateElement(msCompletion,message+'Completed'+((player.storyEnabled&&storyMessages.length>=temp)?'<br><b>Story</b>: '+storyMessages[temp-1]:''))
+				updateElement(msCompletion,message+'已完成'+((player.storyEnabled&&storyMessages.length>=temp)?'<br><b>Story</b>: '+storyMessages[temp-1]:''))
 				updateClass(msCompletion,'achCompleted')
 			} else {
-				updateElement(msCompletion,message+'Incomplete')
+				updateElement(msCompletion,message+'未完成')
 				updateClass(msCompletion,'ach')
 			}
 		}
