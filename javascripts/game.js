@@ -3482,8 +3482,8 @@ function gameTick() {
 			}
 		}
 		if (SNTab=='neutronboosts') {
-			updateElement('breakLimit',(player.breakLimit?'Fix':'Break')+' limit')
-			updateElement('preSupernova','Pre-supernova:<br>'+(player.preSupernova?'On':'Off'))
+			updateElement('breakLimit',(player.breakLimit?'修補':'破裂')+'限制')
+			updateElement('preSupernova','前超新星模式:<br>'+(player.preSupernova?'開':'關'))
 			updateTooltipBase('neutronboost','x'+(Math.round(1e3+100*Math.sqrt(player.neutronBoosts.basePower))/100)+'<sup>'+format(Decimal.add(player.neutronBoosts.powers[0],player.neutronBoosts.powers[1]).add(player.neutronBoosts.powers[2]),2,1)+(totalAliens>0?' (+ '+totalAliens+')':'')+'</sup> = <b>x'+format(neutronBoost)+'</b> for all production')
 			
 			var items=['powerStars','powerTP','powerNS','basePower','ppPower']
@@ -3612,8 +3612,8 @@ function gameTick() {
 		updateElement('strings','你擁有<b>'+format(player.strings)+'</b>弦')
 	}
 	if (tab=='cheat') {
-		updateElement('breakLimitCheat',(player.breakLimit?'Fix':'Break')+' limit')
-		updateElement('breakLimitNS',(player.cheatOptions.breakLimitNS?'Fix ':'Bypass ')+format(Number.MAX_VALUE)+' NS limit')
+		updateElement('breakLimitCheat',(player.breakLimit?'修補':'破裂')+'限制')
+		updateElement('breakLimitNS',(player.cheatOptions.breakLimitNS?'修補':'越過')+format(Number.MAX_VALUE)+'中子星限制')
 	}
 }
 function gameLoop() {
