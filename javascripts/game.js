@@ -3080,33 +3080,33 @@ function gameTick() {
 		}
 	}
 	if (tab=='options') {
-		updateElement('saveGame','Save<br>('+(timeSinceSave==1?'1 second':timeSinceSave+' seconds')+' ago)')
-		updateElement('notationOption','Notation:<br>'+player.notation)
-		if (player.notation=='Mixed') {
+		updateElement('saveGame','保存<br>('+(timeSinceSave==1?'1 秒':timeSinceSave+' 秒')+' 前)')
+		updateElement('notationOption','數據格式:<br>'+player.notation)
+		if (player.notation=='混合式') {
 			showElement('mixedOptionRow','table-row')
 		} else {
 			hideElement('mixedOptionRow')
 		}
 		if (player.updateRate==Number.MAX_VALUE) {
-			updateElement('urOption','Update rate:<br>Unlimited')
+			updateElement('urOption','刷新速度:<br>無限')
 		} else {
-			updateElement('urOption','Update rate:<br>'+player.updateRate+' TPS')
+			updateElement('urOption','刷新速度:<br>'+player.updateRate+' TPS')
 		}
-		updateElement('csOption','Mobile scrolling:<br>'+(player.customScrolling?'On':'Off'))
-		updateElement('exOption','Explanations:<br>'+(player.explanations?'On':'Off'))
-		updateElement('msOption','Use monospaced:<br>'+(player.useMonospaced?'On':'Off'))
-		updateElement('opOption','Offline progress:<br>'+(player.offlineProgress?'On':'Off'))
-		updateElement('hkOption','Hotkeys:<br>'+(player.hotkeys?'On':'Off'))
-		updateElement('spOption','Show progress:<br>'+(player.showProgress?'On':'Off'))
+		updateElement('csOption','手機滑動:<br>'+(player.customScrolling?'開':'關'))
+		updateElement('exOption','解釋:<br>'+(player.explanations?'開':'關'))
+		updateElement('msOption','使用等寬字體:<br>'+(player.useMonospaced?'開':'關'))
+		updateElement('opOption','離線進度:<br>'+(player.offlineProgress?'開':'關'))
+		updateElement('hkOption','快捷鍵:<br>'+(player.hotkeys?'開':'關'))
+		updateElement('spOption','顯示進度:<br>'+(player.showProgress?'開':'關'))
 		if (player.supernovaUpgrades.includes(2)||player.supernovaUpgrades.includes(3)) {
 			showElement('hsOptionC','table-cell')
-			updateElement('hsOption','Headstarts:<br>'+(player.headstarts?'On':'Off'))
+			updateElement('hsOption','起先優勢:<br>'+(player.headstarts?'開':'關'))
 		} else {
 			hideElement('hsOptionC')
 		}
 		if (player.supernovaTabsUnlocked>1) {
 			showElement('ccOptionC','table-cell')
-			updateElement('ccOption','Challenge confirmation:<br>'+(player.challConfirm?'On':'Off'))
+			updateElement('ccOption','挑戰確認:<br>'+(player.challConfirm?'開':'關'))
 		} else {
 			hideElement('ccOptionC')
 		}
@@ -3114,15 +3114,15 @@ function gameTick() {
 			showElement('modrow','block')
 			showElement('blOptionC','table-cell')
 			showElement('psOptionC','table-cell')
-			updateElement('blOption',(player.breakLimit?'Fix':'Break')+' limit')
-			updateElement('psOption','Pre-supernova mode:<br>'+(player.preSupernova?'On':'Off'))
+			updateElement('blOption',(player.breakLimit?'修補':'破壞')+'限制')
+			updateElement('psOption','前超新星模式:<br>'+(player.preSupernova?'開':'關'))
 		} else {
 			hideElement('modrow')
 			hideElement('blOptionC')
 			hideElement('psOptionC')
 		}
-		updateElement('stOption','Theme:<br>'+player.theme)
-		updateElement('slOption','Layout (generators):<br>Two '+(player.layout==1?'columns':'rows'))
+		updateElement('stOption','主題:<br>'+player.theme)
+		updateElement('slOption','格式(生產器):<br>'二'+(player.layout==1?'行':'列'))
 	}
 	if (tab=='transfer') {
 		explainList.tupg7='<b>Transfer upgrade <span style="font-size:66.6%">#7</span></b><br>This upgrade will allow you to be able to prestige with 1% of your stars as without the upgrade, which is equal to '+format(1e37)+' stars.<br>Prestige power gain is increased slighty after buying this upgrade.'
