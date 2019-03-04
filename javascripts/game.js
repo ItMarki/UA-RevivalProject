@@ -3122,7 +3122,7 @@ function gameTick() {
 			hideElement('psOptionC')
 		}
 		updateElement('stOption','主題:<br>'+player.theme)
-		updateElement('slOption','格式(生產器):<br>'二'+(player.layout==1?'行':'列'))
+		updateElement('slOption','格式(生產器):<br>二'+(player.layout==1?'行':'列'))
 	}
 	if (tab=='transfer') {
 		explainList.tupg7='<b>Transfer upgrade <span style="font-size:66.6%">#7</span></b><br>This upgrade will allow you to be able to prestige with 1% of your stars as without the upgrade, which is equal to '+format(1e37)+' stars.<br>Prestige power gain is increased slighty after buying this upgrade.'
