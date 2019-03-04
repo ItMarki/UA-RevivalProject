@@ -2910,7 +2910,7 @@ function gameTick() {
 				showElement('p2row','table-cell')
 				updateElement('prestige2','轉移聲望力量，獲得<br>+'+format(getTransferPoints())+'轉移點數。')
 				enableTooltip('p2tt')
-				updateTooltip('p2tt',(player.explanations?explainList.transfer+'<br>':'')+'轉移點數獲得率: '+formatRate(gainRate[0],'TP')+'<br>高峯k: '+formatRate(player.gainPeak[0],'TP'))
+				updateTooltip('p2tt',(player.explanations?explainList.transfer+'<br>':'')+'轉移點數獲得率: '+formatRate(gainRate[0],'TP')+'<br>高峯: '+formatRate(player.gainPeak[0],'TP'))
 			} else {
 				hideElement('p2row')
 				disableTooltip('p2tt')
