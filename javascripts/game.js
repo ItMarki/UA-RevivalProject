@@ -2828,9 +2828,9 @@ function gameTick() {
 						lastLine='Buy '+format(maxBulk,2,1)
 						if (Decimal.lte(maxBulk,1000)) lastLine=lastLine+' (x'+format(Decimal.pow(multiplier,maxBulk).sub(1).div(multiplier-1),2,0,false)+')'
 					} else if (a>player.highestTierPrestiges[0]) {
-						lastLine='Cost: ???'
+						lastLine='成本: ???'
 					} else {
-						lastLine='Cost: '+formatCosts(cost)
+						lastLine='成本: '+formatCosts(cost)
 					}
 				    updateTooltipBase(name,currentText)
 				    var name='t'+(a+1)+'GenButton'+((player.layout==2)?'2':'')
