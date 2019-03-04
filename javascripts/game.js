@@ -2895,36 +2895,36 @@ function gameTick() {
 				showElement('p1row','table-cell')
 				var gpp=getPrestigePower()
 				var multi=gpp.div(player.prestigePower)
-				updateElement('prestige1','Reset this game and get a boost:<br>x'+format(multi,3,0,false)+' production')
+				updateElement('prestige1','重置本遊戲，獲得加成t:<br>x'+format(multi,3,0,false)+' production')
 				enableTooltip('p1tt')
-				updateTooltip('p1tt',(player.explanations?explainList.prestige+'<br>':'')+'Total multiplier for next prestige: x'+format(gpp,3,0,false)+'<br>Growth rate: '+format(multi.pow(1/player.prestigePlaytime).sub(1).times(100),2,0,false)+'%')
+				updateTooltip('p1tt',(player.explanations?explainList.prestige+'<br>':'')+'下聲望的總倍數: x'+format(gpp,3,0,false)+'<br>生長率: '+format(multi.pow(1/player.prestigePlaytime).sub(1).times(100),2,0,false)+'%')
 			} else if (!showTooMuch&&(player.currentChallenge==8||player.currentChallenge==13)) {
 				showElement('p1row','table-cell')
-				updateElement('prestige1','Lose a prestige, but lose 50% of your prestige power.')
+				updateElement('prestige1','失去一個聲望，但失去你的聲望力量的50%。')
 				enableTooltip('p1tt')
-				updateTooltip('p1tt',(player.explanations?explainList.prestige+'<br>':'')+'If you lose a prestige, you will reduce your prestige power to x'+format(player.prestigePower.div(2).max(1),3,0,false)+'.')
+				updateTooltip('p1tt',(player.explanations?explainList.prestige+'<br>':'')+'如果你失去一個聲望，你會將聲望力量減少到x'+format(player.prestigePower.div(2).max(1),3,0,false)+'。')
 			} else {
 				hideElement('p1row')
 			}
 			if (!showTooMuch&&player.prestigePower.gte(100)) {
 				showElement('p2row','table-cell')
-				updateElement('prestige2','Transfer prestige power for<br>+'+format(getTransferPoints())+' TP.')
+				updateElement('prestige2','轉移聲望力量，獲得<br>+'+format(getTransferPoints())+'轉移點數。')
 				enableTooltip('p2tt')
-				updateTooltip('p2tt',(player.explanations?explainList.transfer+'<br>':'')+'TP gain rate: '+formatRate(gainRate[0],'TP')+'<br>Peak: '+formatRate(player.gainPeak[0],'TP'))
+				updateTooltip('p2tt',(player.explanations?explainList.transfer+'<br>':'')+'轉移點數獲得率: '+formatRate(gainRate[0],'TP')+'<br>高峯k: '+formatRate(player.gainPeak[0],'TP'))
 			} else {
 				hideElement('p2row')
 				disableTooltip('p2tt')
 			}
 			if (((player.currentChallenge==8||player.currentChallenge==13)&&player.generators[0].amount.gt(0))||player.currentChallenge==11) {
 				showElement('challPow','block')
-				updateElement('challPow','Challenge '+player.currentChallenge+' power: <b>x'+format(player.challPow,3,0,false)+'</b>')
+				updateElement('challPow','挑戰'+player.currentChallenge+' 力量: <b>x'+format(player.challPow,3,0,false)+'</b>')
 			} else {
 				hideElement('challPow')
 			}
 			if (!showTooMuch&&player.showProgress&&player.prestigePower.lt(100)) {
 				showElement('transferProgress','block')
 				var percentage=player.prestigePower.log10()/2
-				if (percentage>0.99995) updateElement('transferProgress','<b>Progress to transfer</b>: 99.99%')
+				if (percentage>0.99995) updateElement('transferProgress','<b>往轉移的進度</b>: 99.99%')
 				else updateElement('transferProgress','<b>Progress to transfer</b>: '+(percentage*100).toFixed(2)+'%')
 			} else {
 				hideElement('transferProgress')
