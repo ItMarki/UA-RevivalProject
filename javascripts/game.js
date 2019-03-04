@@ -2800,7 +2800,7 @@ function gameTick() {
                 }
 				if (showGenerator) {
 					var name='t'+(a+1)+'Gen'+(player.layout==2?'2':'')
-					var currentText='<b>Tier '+(a+1)+' generator</b><br>'
+					var currentText='<b>第'+(a+1)+'級生產器</b><br>'
 					var tooltipText=''
 					if (player.explanations) tooltipText=explainList.gens
 					if (player.currentChallenge==5&&player.highestTierPrestiges[0]>a) {
@@ -2808,10 +2808,10 @@ function gameTick() {
 					} else if (player.generators[a].amount.eq(player.generators[a].bought)||a==player.highestTierPrestiges[0]-1||player.currentChallenge==5) {
 						currentText=currentText+format(player.generators[a].amount,0,1)
 					} else {
-						currentText=currentText+format(player.generators[a].amount)+' ('+format(pps[a+1],(pps[a+1].gte(1000))?2:1,0,false)+'/s), '+format(player.generators[a].bought,2,1)+' bought'
-						tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Growth rate: '+format(pps[a+1].div(player.generators[a].amount).times(100),2,0,false)+'%'
+						currentText=currentText+format(player.generators[a].amount)+' ('+format(pps[a+1],(pps[a+1].gte(1000))?2:1,0,false)+'/s), '+format(player.generators[a].bought,2,1)+'已購買'
+						tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'生長率: '+format(pps[a+1].div(player.generators[a].amount).times(100),2,0,false)+'%'
 					}
-					if (Decimal.gt(player.generators[a].amount,0)) if (ppsSingles[a]!=undefined) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Production for 1 generator: '+format(ppsSingles[a],(ppsSingles[a].gte(1000))?2:1,0,false)+'/s'
+					if (Decimal.gt(player.generators[a].amount,0)) if (ppsSingles[a]!=undefined) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'一個生產器的生產力: '+format(ppsSingles[a],(ppsSingles[a].gte(1000))?2:1,0,false)+'/s'
 					if (tooltipText=='') disableTooltip('t'+(a+1)+'Gen'+(player.layout==2?'2':''))
 					else {
 						enableTooltip('t'+(a+1)+'Gen'+(player.layout==2?'2':''))
