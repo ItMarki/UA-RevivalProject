@@ -2895,7 +2895,7 @@ function gameTick() {
 				showElement('p1row','table-cell')
 				var gpp=getPrestigePower()
 				var multi=gpp.div(player.prestigePower)
-				updateElement('prestige1','重置本遊戲，獲得加成t:<br>x'+format(multi,3,0,false)+' production')
+				updateElement('prestige1','重置本遊戲，獲得加成:<br>x'+format(multi,3,0,false)+'生產力')
 				enableTooltip('p1tt')
 				updateTooltip('p1tt',(player.explanations?explainList.prestige+'<br>':'')+'下聲望的總倍數: x'+format(gpp,3,0,false)+'<br>生長率: '+format(multi.pow(1/player.prestigePlaytime).sub(1).times(100),2,0,false)+'%')
 			} else if (!showTooMuch&&(player.currentChallenge==8||player.currentChallenge==13)) {
