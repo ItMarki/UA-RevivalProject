@@ -3374,7 +3374,7 @@ function gameTick() {
 			}
 			if (player.rewardBoxes[0]>0) {
 				showElement('rewardBoxes','inline-block')
-				currentText='You have <b>'+player.rewardBoxes[0]+'</b> unopened reward boxes'
+				currentText='你擁有<b>'+player.rewardBoxes[0]+'</b>還未開啓的獎勵盒'
 				updateElement('rewardBoxAmount',currentText)
 				currentText=''
 				if (player.rewardBoxes[1]>0) {
@@ -3571,7 +3571,7 @@ function gameTick() {
 			}
 		}
 		if (SNTab=='aliens') {
-			updateElement('aliens','You have <b>'+player.aliens.amount+'</b>'+(player.aliens.kept>0?' (+'+player.aliens.kept+')':'')+' aliens, translated to <b>'+totalAliens+'</b> free neutron boost power')
+			updateElement('aliens','你擁有<b>'+player.aliens.amount+'</b>'+(player.aliens.kept>0?' (+'+player.aliens.kept+')':'')+'外星人，轉換過來就是<b>'+totalAliens+'</b>免費中子加成力量')
 			if (player.aliens.amount<60) {
 				showElement('alienProgress','inline')
 				showElement('aliensLeft','inline-block')
@@ -3597,7 +3597,7 @@ function gameTick() {
 			oldHNTab=HNTab
 		}
 		if (HNTab=='stellarpillars') {
-			updateElement('stellarPillarsNeutrons','You have <b>'+format(player.neutrons)+'</b> neutrons which reduced the cost of normal generators by <b>'+format(neutronPower)+'x</b> (neutron power)')
+			updateElement('stellarPillarsNeutrons','你擁有<b>'+format(player.neutrons)+'</b>中子，將普通生產器的成本減少<b>'+format(neutronPower)+'x</b> (中子力量)')
 			if (ntpps[0].eq(0)) {
 				updateElement('stellarPillarsNeutronsRate','<b>0</b> neutrons/s')
 			} else {
@@ -3606,10 +3606,10 @@ function gameTick() {
 		}
 	}
 	if (tab=='exotic') {
-		updateElement('particles','You have <b>'+format(player.particles)+'</b> particles')
+		updateElement('particles','你擁有<b>'+format(player.particles)+'</b>粒子')
 	}
 	if (tab=='quantum') {
-		updateElement('strings','You have <b>'+format(player.strings)+'</b> strings')
+		updateElement('strings','你擁有<b>'+format(player.strings)+'</b>弦')
 	}
 	if (tab=='cheat') {
 		updateElement('breakLimitCheat',(player.breakLimit?'Fix':'Break')+' limit')
