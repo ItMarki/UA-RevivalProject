@@ -2967,7 +2967,7 @@ function gameTick() {
 					currentText=currentText+format(player.neutronTiers[a].amount)+' ('+format(ntpps[a+1],(ntpps[a+1].gte(1000))?2:1,0,false)+'/s), '+format(player.neutronTiers[a].bought,2,1)+' bought'
 				}
 				var name='nt'+(a+1)+'Gen'
-				var lastLine='Cost: '+formatNSCosts(costs.neutronTiers[a])
+				var lastLine='成本: '+formatNSCosts(costs.neutronTiers[a])
 				updateTooltipBase(name,currentText)
 				updateElement(name+'Button',lastLine)
 				var tooltipText=''
@@ -3126,9 +3126,9 @@ function gameTick() {
 	}
 	if (tab=='transfer') {
 		explainList.tupg7='<b>Transfer upgrade <span style="font-size:66.6%">#7</span></b><br>This upgrade will allow you to be able to prestige with 1% of your stars as without the upgrade, which is equal to '+format(1e37)+' stars.<br>Prestige power gain is increased slighty after buying this upgrade.'
-		updateElement('tupg12button','Cost: '+format(1000)+' TP')
-		updateElement('tupg13button','Cost: '+format(3000)+' TP')
-		updateElement('tupg14button','Cost: '+format(5000)+' TP')
+		updateElement('tupg12button','成本: '+format(1000)+' TP')
+		updateElement('tupg13button','成本: '+format(3000)+' TP')
+		updateElement('tupg14button','成本: '+format(5000)+' TP')
 		for (a=1;a<15;a++) {
 			var tooltipText=''
 			if (player.explanations) tooltipText=explainList['tupg'+a]
@@ -3225,15 +3225,15 @@ function gameTick() {
 			if (player.supernovaUpgrades.includes(3)) if (player.supernovaTabsUnlocked>2) if (player.headstarts&&player.currentChallenge==0&&!player.preSupernova) {
 				showElement('snupg16row','table-row')
 				var ppHeadstartMessage='你在轉移或超新星後有<b>x'+format(ppHeadstart)+'</b>聲望力量。'
-				updateElement('ppHeadstartUpg1','<b>Normal subformula</b>: x'+format(player.neutronStars)+'<sup>min(max('+format(player.neutronStars.log10(),2,1,false)+',5),'+(12.5+0.05*player.ppHeadstartUpgrades[0]).toPrecision(4)+')</sup> =<br>x'+format(ppHSValue1))
-				updateElement('ppHeadstartUpg2','<b>Pre-break limit</b>: x'+format(ppHSPreBreakLimit))
-				updateElement('ppHeadstartUpg3','<b>Post-break subformula</b>: x'+format(player.prestigePeak[0])+'<sup>'+(1-1/(player.ppHeadstartUpgrades[2]+10)).toPrecision(2)+'</sup> = x'+format(ppHSValue2))
+				updateElement('ppHeadstartUpg1','<b>普通子公式</b>: x'+format(player.neutronStars)+'<sup>min(max('+format(player.neutronStars.log10(),2,1,false)+',5),'+(12.5+0.05*player.ppHeadstartUpgrades[0]).toPrecision(4)+')</sup> =<br>x'+format(ppHSValue1))
+				updateElement('ppHeadstartUpg2','<b>破裂前限制</b>: x'+format(ppHSPreBreakLimit))
+				updateElement('ppHeadstartUpg3','<b>破裂後子公式</b>: x'+format(player.prestigePeak[0])+'<sup>'+(1-1/(player.ppHeadstartUpgrades[2]+10)).toPrecision(2)+'</sup> = x'+format(ppHSValue2))
 				for (a=1;a<4;a++) {
 					if ((a==1&&player.ppHeadstartUpgrades[0]==20)||(a==3&&player.ppHeadstartUpgrades[2]==10)) {
 						hideElement('ppHeadstartUpg'+a+'button')
 					} else {
 						showElement('ppHeadstartUpg'+a+'button','inline-block')
-						updateElement('ppHeadstartUpg'+a+'button','Cost: '+formatNSCosts(costs.ppHeadstartUpgs[a-1]))
+						updateElement('ppHeadstartUpg'+a+'button','成本: '+formatNSCosts(costs.ppHeadstartUpgs[a-1]))
 						if (player.neutronStars.gte(costs.ppHeadstartUpgs[a-1])) {
 							updateClass('ppHeadstartUpg'+a+'button','supernovaButton')
 						} else {
@@ -3242,11 +3242,11 @@ function gameTick() {
 					}
 				}
 				if (player.breakLimit) {
-					if (ppHSValue1.gt(ppHSValue2)) ppHeadstartMessage=ppHeadstartMessage+' (post-break subformula is chosen)'
-					else ppHeadstartMessage=ppHeadstartMessage+' (normal subformula is chosen)'
+					if (ppHSValue1.gt(ppHSValue2)) ppHeadstartMessage=ppHeadstartMessage+' (選定破裂後子公式)'
+					else ppHeadstartMessage=ppHeadstartMessage+' (選定普通子公式)'
 				} else {
-					if (ppHSValue1.gt(ppHSPreBreakLimit)) ppHeadstartMessage=ppHeadstartMessage+' (pre-break limit is chosen)'
-					else ppHeadstartMessage=ppHeadstartMessage+' (normal subformula is chosen)'
+					if (ppHSValue1.gt(ppHSPreBreakLimit)) ppHeadstartMessage=ppHeadstartMessage+' (選定破裂前限制)'
+					else ppHeadstartMessage=ppHeadstartMessage+' (選定普通子公式)'
 				}
 				updateElement('ppHeadstart',ppHeadstartMessage)
 			}
@@ -3254,15 +3254,15 @@ function gameTick() {
 				showElement('snupgrow5','table-row')
 				showElement('snupgrow6','table-row')
 				showElement('snupgrow7','table-row')
-				updateElement('snupg17button','Cost: '+formatNSCosts(1e55))
-				updateElement('snupg18button','Cost: '+formatNSCosts(1e70))
-				updateElement('snupg19button','Cost: '+formatNSCosts(1e85))
-				updateElement('snupg20button','Cost: '+formatNSCosts(1e100))
-				updateElement('snupg21button','Cost: '+formatNSCosts(1e110))
-				updateElement('snupg22button','Cost: '+formatNSCosts(1e120))
-				updateElement('snupg23button','Cost: '+formatNSCosts(1e135))
-				updateElement('snupg24button','Cost: '+formatNSCosts(1e150))
-				updateElement('snupg25button','Cost: '+formatNSCosts(1e165))
+				updateElement('snupg17button','成本: '+formatNSCosts(1e55))
+				updateElement('snupg18button','成本: '+formatNSCosts(1e70))
+				updateElement('snupg19button','成本: '+formatNSCosts(1e85))
+				updateElement('snupg20button','成本: '+formatNSCosts(1e100))
+				updateElement('snupg21button','成本: '+formatNSCosts(1e110))
+				updateElement('snupg22button','成本: '+formatNSCosts(1e120))
+				updateElement('snupg23button','成本: '+formatNSCosts(1e135))
+				updateElement('snupg24button','成本: '+formatNSCosts(1e150))
+				updateElement('snupg25button','成本: '+formatNSCosts(1e165))
 				updateElement('snupg26button','Cost: '+formatNSCosts(1e180))
 			} else {
 				hideElement('snupgrow5')
@@ -3361,7 +3361,7 @@ function gameTick() {
 			currentText=''
 			if (player.autobuyers.interval>0.05) {
 				showElement('intervalReduction','block')
-				updateElement('intReduceCost',currentText+((player.autobuyers.interval==0.05)?'':'Cost: '+formatNSCosts(costs.intReduceCost)))
+				updateElement('intReduceCost',currentText+((player.autobuyers.interval==0.05)?'':'成本: '+formatNSCosts(costs.intReduceCost)))
 				if (player.autobuyers.interval==0.05) {
 					updateClass('intReduceCost','boughtUpgrade')
 				} else if (player.neutronStars.gte(costs.intReduceCost)) {
@@ -3432,7 +3432,7 @@ function gameTick() {
 					hideElement('bulkBuyIncrease')
 				} else {
 					showElement('bulkBuyIncrease','block')
-					updateElement('bbIncreaseCost',currentText+((player.autobuyers.gens.bulk==256&&!player.breakLimit)?'':'Cost: '+formatNSCosts(costs.bbCost)))
+					updateElement('bbIncreaseCost',currentText+((player.autobuyers.gens.bulk==256&&!player.breakLimit)?'':'成本: '+formatNSCosts(costs.bbCost)))
 					if (player.neutronStars.gte(costs.bbCost)) {
 						updateClass('bbIncreaseCost','supernovaButton')
 					} else {
@@ -3463,7 +3463,7 @@ function gameTick() {
 		if (SNTab=='buyinshop') {
 			var descriptions={1:'Autogenerator bulk buy',2:'Autogenerator priorities',3:'Autoprestige options',4:'Autotransfer options',5:'Autotransfer options II',6:'Autonova',7:'Pre-break autonova options',8:'Autotransfer options III'}
 			for (a in descriptions) {
-				updateElement('bisfeature'+a+'button','Cost: '+formatNSCosts(costs.bisfeatures[a-1]))
+				updateElement('bisfeature'+a+'button','成本: '+formatNSCosts(costs.bisfeatures[a-1]))
 			}
 			for (a=1;a<9;a++) {
 				if (player.explanations) {
@@ -3511,7 +3511,7 @@ function gameTick() {
 				currentText=''
 				if ((a==2)?(player.neutronBoosts.powers[2]<60):(a==3)?(player.neutronBoosts.basePower<10):(a==4)?(player.neutronBoosts.ppPower<0.15):(player.neutronBoosts.powers[a]<40)) {
 					showElement(items[a]+'Cost','inline-block')
-					if ((a==2)?(player.neutronBoosts.powers[2]<60):(a==3)?(player.neutronBoosts.basePower<10):(a==4)?(player.neutronBoosts.ppPower<0.15):(player.neutronBoosts.powers[a]<40)) currentText=currentText+'Cost: '+((a==0)?formatCosts(costs.neutronBoosts[a]):(a==1)?(format(costs.neutronBoosts[a])+' TP'):formatNSCosts(costs.neutronBoosts[a]))
+					if ((a==2)?(player.neutronBoosts.powers[2]<60):(a==3)?(player.neutronBoosts.basePower<10):(a==4)?(player.neutronBoosts.ppPower<0.15):(player.neutronBoosts.powers[a]<40)) currentText=currentText+'成本: '+((a==0)?formatCosts(costs.neutronBoosts[a]):(a==1)?(format(costs.neutronBoosts[a])+' TP'):formatNSCosts(costs.neutronBoosts[a]))
 					updateElement(items[a]+'Cost',currentText)
 					if ((a==2)?(player.neutronBoosts.powers[2]==60):(a==3)?(player.neutronBoosts.basePower==10):(a==4)?(player.neutronBoosts.ppPower==0.15):(player.neutronBoosts.powers[a]==40)) {
 						updateClass(items[a]+'Cost','boughtUpgrade')
@@ -3545,22 +3545,22 @@ function gameTick() {
 				showElement('destabilizationActivation','inline-block')
 				hideElement('destabilizationInfo')
 				showElement('destabilizationUpgrades','table')
-				updateElement('destabilizationActivation','Activate Destabilization!<br>('+format(unstableStarsAfterActivation)+' unstable stars)')
-				updateElement('destabilizationWarning','<b>WARNING</b>: If you destabilize stars, you will lose all your generators!')
-				updateElement('destabilizationInterval','Interval: '+formatTime(dsInterval)+'/tick')
-				updateElement('destabilizationTime','Time: '+format(dsTime,2,1)+' ticks')
-				updateElement('destabilizationPercentage','Logarithmically percentage of unstable stars after activation: '+dsPercentage.toPrecision(4)+'%')		
+				updateElement('destabilizationActivation','開啓不穩定化！<br>('+format(unstableStarsAfterActivation)+'不穩定恆星)')
+				updateElement('destabilizationWarning','<b>警告</b>:如果你不穩定化恆星，你會失去全部生產器！')
+				updateElement('destabilizationInterval','間隔: '+formatTime(dsInterval)+'/tick')
+				updateElement('destabilizationTime','時間: '+format(dsTime,2,1)+' ticks')
+				updateElement('destabilizationPercentage','開啓後的不穩定恆星的對數百分比: '+dsPercentage.toPrecision(4)+'%')		
 				for (a=1;a<5;a++) {
 					if ((a<3&&player.destabilization.upgrades[a-1]==20)||(a==4&&player.destabilization.upgrades[3]==1)) {
 						if (a==4) {
 							updateClass('destabilizationUpg4button','boughtUpgrade')
-							updateElement('destabilizationUpg4button','Cost: '+formatNSCosts(1e45))
+							updateElement('destabilizationUpg4button','成本: '+formatNSCosts(1e45))
 						} else {
 							hideElement('destabilizationUpg'+a+'button')
 						}
 					} else {
 						showElement('destabilizationUpg'+a+'button','inline-block')
-						updateElement('destabilizationUpg'+a+'button','Cost: '+formatNSCosts(costs.destabilization[a-1]))
+						updateElement('destabilizationUpg'+a+'button','成本: '+formatNSCosts(costs.destabilization[a-1]))
 						if (player.neutronStars.gte(costs.destabilization[a-1])) {
 							updateClass('destabilizationUpg'+a+'button','supernovaButton')
 						} else {
