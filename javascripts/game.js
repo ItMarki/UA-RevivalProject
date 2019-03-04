@@ -3134,7 +3134,7 @@ function gameTick() {
 			if (player.explanations) tooltipText=explainList['tupg'+a]
 			if (player.transferUpgrades.includes(a)) {
 				var mult=upgMults['tupg'+a]
-				if (mult!=undefined) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Current multiplier: '+format(mult,2,0,false)+'x'
+				if (mult!=undefined) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'現在倍數: '+format(mult,2,0,false)+'x'
 			}
 			if (tooltipText=='') {
 				disableTooltip('tupg'+a)
@@ -3200,7 +3200,7 @@ function gameTick() {
 						if (player.headstarts&&player.currentChallenge==0&&!player.preSupernova) if (player.supernovaTabsUnlocked<3) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Start with specified PP: '+format(ppHeadstart)+'x'
 					} else {
 						var mult=upgMults['snupg'+a]
-						if (mult!=undefined) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Current multiplier: '+format(mult,2,0,false)+'x'
+						if (mult!=undefined) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'現在倍數: '+format(mult,2,0,false)+'x'
 					}
 				}
 				if (tooltipText=='') {
