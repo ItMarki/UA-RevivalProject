@@ -99,7 +99,7 @@ ordinals=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th']
 lastSave=0
 timeSinceSave=0
 themeSelected='Normal'
-milestoneRequirements=['購買你第一個第級生產器','購買你第一個第二級生產器','購買你第一個第三1級生產器','購買你第一個第四級生產器','購買你第一個第五級生產器','購買你第一個第六級生產器','購買你第一個第七級生產器','購買你第一個第八級生產器','購買你第一個第九級生產器','購買你第一個第十級生產器',
+milestoneRequirements=['購買你第一個第級生產器','購買你第一個第二級生產器','購買你第一個第三級生產器','購買你第一個第四級生產器','購買你第一個第五級生產器','購買你第一個第六級生產器','購買你第一個第七級生產器','購買你第一個第八級生產器','購買你第一個第九級生產器','購買你第一個第十級生產器',
 	'購買你5個第十級生產器',' 第一次聲望','到達5倍聲望力量','到達10倍聲望力量','到達20倍聲望力量','到達50倍聲望力量','到達75倍聲望力量','第一次轉移','購買2轉移升級','購買4轉移升級',
 	'購買8轉移升級','購買12轉移升級','購買14轉移升級','第一次超新星','購買2超新星升級','購買4超新星升級','購買8超新星升級','購買12超新星升級','總共獲得100中子','Unlock challenges',
 	'Complete a challenge','Complete 2 challenges','Complete 4 challenges','Complete 8 challenges','Complete 12 challenges','Max all of autobuyer upgrades','Buy 1 buyinshop feature','Buy 2 buyinshop features','Buy 4 buyinshop features','Break limit!',
