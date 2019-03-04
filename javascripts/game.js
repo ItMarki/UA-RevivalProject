@@ -99,9 +99,9 @@ ordinals=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th']
 lastSave=0
 timeSinceSave=0
 themeSelected='Normal'
-milestoneRequirements=['Buy your first tier 1 generator','Buy your first tier 2 generator','Buy your first tier 3 generator','Buy your first tier 4 generator','Buy your first tier 5 generator','Buy your first tier 6 generator','Buy your first tier 7 generator','Buy your first tier 8 generator','Buy your first tier 9 generator','Buy your first tier 10 generator',
-	'Buy 5 10th tier generators','Prestige for the first time','Reach 5x prestige power','Reach 10x prestige power','Reach 20x prestige power','Reach 50x prestige power','Reach 75x prestige power','Transfer for the first time','Buy 2 transfer upgrades','Buy 4 transfer upgrades',
-	'Buy 8 transfer upgrades','Buy 12 transfer upgrades','Buy 14 transfer upgrades','Supernova for the first time','Buy 2 supernova upgrades','Buy 4 supernova upgrades','Buy 8 supernova upgrades','Buy 12 supernova upgrades','Earn 100 neutron stars in total','Unlock challenges',
+milestoneRequirements=['購買你第一個第級生產器','購買你第一個第二級生產器','購買你第一個第三1級生產器','購買你第一個第四級生產器','購買你第一個第五級生產器','購買你第一個第六級生產器','購買你第一個第七級生產器','購買你第一個第八級生產器','購買你第一個第九級生產器','購買你第一個第十級生產器',
+	'購買你5個第十級生產器',' 第一次聲望','到達5倍聲望力量','到達10倍聲望力量','到達20倍聲望力量','到達50倍聲望力量','到達75倍聲望力量','第一次轉移','購買2轉移升級','購買4轉移升級',
+	'購買8轉移升級','購買12轉移升級','購買14轉移升級','第一次超新星','購買2超新星升級','購買4超新星升級','購買8超新星升級','購買12超新星升級','總共獲得100中子','Unlock challenges',
 	'Complete a challenge','Complete 2 challenges','Complete 4 challenges','Complete 8 challenges','Complete 12 challenges','Max all of autobuyer upgrades','Buy 1 buyinshop feature','Buy 2 buyinshop features','Buy 4 buyinshop features','Break limit!',
 	'Buy all buyinshop features','Reach 5 neutron boost power','Reach 10 neutron boost power','Reach 20 neutron boost power','Buy your first neutron tier 1 generator','Buy your first neutron tier 2 generator','Buy your first neutron tier 3 generator','Buy your first neutron tier 5 generator','Buy your first neutron tier 8 generator','Buy your first neutron tier 10 generator']
 storyMessages=['Breakfast is ready!','Sorry, but this breakfast belongs to yo- oh wait..','Our home got invaded by aliens! Oh no, we need to do something!','Quick, put on your clothes and lets go with your parents!','Phew, that was close. We are going to the planet who invaded us.','We made it to the airport, lets fly around to the rocket!','And here we are. I could control the rocket, if I was the owner.','This is it, get your spacesuit on.','Blast off! We are going to the planet that invaded us!','Oooo, stars are shiny. Wait a minute... whenever I see, I see too many stars. Who did this?',
@@ -2820,7 +2820,7 @@ function gameTick() {
 					var lastLine=''
 					var cost=costs.tiers[a]
 					if (player.milestones==0&&a==0) {
-						lastLine='Click here!'
+						lastLine='按在這裏！'
 					} else if (keysPressed.includes(16)&&player.highestTierPrestiges[0]>=a&&player.stars.gte(cost)&&player.currentChallenge!=14) {
 						var multiplier=getCostMultiplier(a+1)
 						var resource=(player.currentChallenge==4&&a>0)?player.generators[a-1].amount:player.stars
