@@ -2634,13 +2634,13 @@ function gameTick() {
         if (shown) {
             if (i == 0) {
                 showElement('prestigePoints', 'table')
-                updateTooltipBase('transferPoints', format(player.transferPoints) + 轉移點數' + (player.transferPoints.eq(1) ? '' : ''))
+                updateTooltipBase('transferPoints', format(player.transferPoints) + '轉移點數')
             } else if (i == 1) {
                 showElement('neutronStars', 'table-cell')
-                updateTooltipBase('neutronStars', format(player.neutronStars) + '中子星' + (player.neutronStars.eq(1) ? '' : ''))
+                updateTooltipBase('neutronStars', format(player.neutronStars) + '中子星')
             } else {
                 showElement('quarkStars', 'table-cell')
-                updateTooltipBase('quarkStars', format(player.quarkStars) + '夸克星' + (player.quarkStars.eq(1) ? '' : ''))
+                updateTooltipBase('quarkStars', format(player.quarkStars) + '夸克星')
             }
         } else {
             if (i == 0) hideElement('prestigePoints')
