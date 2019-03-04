@@ -2655,7 +2655,7 @@ function gameTick() {
 		} else {
 			showElement('requirementChild','inline-block')
 			moveElement('requirementChild',((player.supernovaTabsUnlocked==3)?'genTabs':'supernovaTabs')+'Row')
-			updateElement('requirement','Next requires '+format(streqs[player.supernovaTabsUnlocked])+' NS')
+			updateElement('requirement','下一個需要'+format(streqs[player.supernovaTabsUnlocked])+'中子星')
 			updateClass('requirement',(player.supernovaTabsUnlocked==3)?'supernovaLockedTab':'lockedUpgrade')
 		}
 		for (a=1;a<=streqs.length;a++) {
