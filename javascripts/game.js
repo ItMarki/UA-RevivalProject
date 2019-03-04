@@ -2953,7 +2953,7 @@ function gameTick() {
 			}
 		}
 		if (genTab=='neutronTiers') {
-			updateElement('neutrons','You have <b>'+format(player.neutrons)+'</b> neutrons, reducing the cost of normal generators by <b>'+format(neutronPower)+'x</b> (neutron power).')
+			updateElement('neutrons','你擁有<b>'+format(player.neutrons)+'</b>中子，將普通生產器的成本減少<b>'+format(neutronPower)+'x</b> (中子力量).')
 			if (ntpps[0].eq(0)) {
 				updateElement('neutronsRate','You are producing <b>0</b> neutrons per second.')
 			} else {
