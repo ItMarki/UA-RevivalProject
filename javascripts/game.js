@@ -1490,7 +1490,7 @@ function switchUR() {
 
 function updateMilestones() {
 	updateElement('milestones',player.milestones+'/'+milestoneRequirements.length)
-	updateElement('storyOption',(player.storyEnabled?'Disable':'Enable')+' story')
+	updateElement('storyOption',(player.storyEnabled?'禁用':'使用')+' 故事')
 	var temp=1
 	while (document.getElementById('milestone'+temp)) {
 		if (temp>player.milestones+1) {
