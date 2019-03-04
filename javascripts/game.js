@@ -2713,10 +2713,10 @@ function gameTick() {
 	if (showTooMuch) {
 		explainList.supernova='<b>Supernova</b><br>After the layers of reset called prestige and transfer; there is a third layer of reset called supernova.<br>You need to reach '+format(Number.MAX_VALUE)+' stars to get your first supernova. Every time you supernova, you will get a single neutron star which you can buy it for upgrades and more content.'
 		if (tooMuch) {
-			updateElement('tooMuchMessage','The universe has been destroyed due to a overflow of stars.')
+			updateElement('tooMuchMessage','由於一個恆星的溢滿，宇宙被毀滅。')
 			hideElement('notNow')
 		} else {
-			updateElement('tooMuchMessage','You are now able to destroy your stars and gain your neutron stars. However, if you reach too many stars, supernova will be forced.')
+			updateElement('tooMuchMessage','你現在可以破壞你的恆星，獲得中子星。但是，如果你到達太多恆星，會強迫超新星。')
 			showElement('notNow','table-cell')
 		}
 		if (player.explanations) {
@@ -2744,10 +2744,10 @@ function gameTick() {
 	if (player.stars.gte(Number.MAX_VALUE)&&!showTooMuch) {
 		explainList.supernova='<b>Supernova</b><br>After the layers of reset called prestige and transfer; there is a third layer of reset called supernova.<br>You need to reach '+format(Number.MAX_VALUE)+' stars to get your first supernova. Each time you supernova, you will get a single neutron star which you can buy it for upgrades and more content.'
 		showElement('prestige3bl','table-cell')
-		updateElement('prestige3bl','Supernova (explode stars) for<br>+'+format(getPostPrestigePoints(3))+' NS.')
+		updateElement('prestige3bl','超新星(爆炸恆星)，獲得<br>+'+format(getPostPrestigePoints(3))+'中子星。')
 		if (player.breakLimit) {
 			enableTooltip('p3tt')
-			updateTooltip('p3tt',(player.explanations?explainList.supernova+'<br>':'')+'NS gain rate: '+formatRate(gainRate[1],'NS')+'<br>Peak: '+formatRate(player.gainPeak[1],'NS'))
+			updateTooltip('p3tt',(player.explanations?explainList.supernova+'<br>':'')+'中子星獲得率: '+formatRate(gainRate[1],'NS')+'<br>高峯: '+formatRate(player.gainPeak[1],'NS'))
 		} else if (player.explanations) {
 			enableTooltip('p3tt')
 			updateTooltip('p3tt',explainList.supernova)
