@@ -3529,26 +3529,26 @@ function gameTick() {
 		if (SNTab=='destabilization') {
 			if (player.destabilization.activated) {
 				if (player.destabilization.timeLeft>0) {
-					updateElement('destabilizationStatus','<b>Status</b>: Running')
+					updateElement('destabilizationStatus','<b>狀態</b>:進行中')
 					showElement('destabilizationInfo','inline-block')
-					updateElement('destabilizationInfo','Destabilization will duplicate stars in '+formatTime(dsInterval)+'/tick<br><b>Time left</b>: '+(player.destabilization.timeLeft==1?'1 tick':player.destabilization.timeLeft+' ticks')+'<br>('+formatTime(player.destabilization.timeLeft*dsInterval-player.playtime+player.destabilization.lastTick)+')')
-					updateElement('destabilizationWarning','<b>WARNING</b>: If you transfer or supernova now, destabilization will be interrupted!')
+					updateElement('destabilizationInfo','不穩定化會在'+formatTime(dsInterval)+'/刻<br>內複製恆星<b>剩餘時間</b>: '+(player.destabilization.timeLeft==1?'1刻':player.destabilization.timeLeft+'刻')+'<br>('+formatTime(player.destabilization.timeLeft*dsInterval-player.playtime+player.destabilization.lastTick)+')')
+					updateElement('destabilizationWarning','<b>警告</b>:如果你現在轉移或超新星，不穩定化會被中斷！')
 				} else {
-					updateElement('destabilizationStatus','<b>Status</b>: Activated')
+					updateElement('destabilizationStatus','<b>狀態</b>:開啓')
 					hideElement('destabilizationInfo')
-					updateElement('destabilizationWarning','<b>WARNING</b>: If you prestige, transfer, or supernova now, all of your unstable stars will reset!')
+					updateElement('destabilizationWarning','<b>警告</b>:如果你現在聲望，轉移或超新星，你全部的不穩定恆星會被重置！')
 				}
 				hideElement('destabilizationActivation')
 				hideElement('destabilizationUpgrades')
 			} else {
-				updateElement('destabilizationStatus','<b>Status</b>: Not activated')
+				updateElement('destabilizationStatus','<b>狀態</b>:不開啓')
 				showElement('destabilizationActivation','inline-block')
 				hideElement('destabilizationInfo')
 				showElement('destabilizationUpgrades','table')
 				updateElement('destabilizationActivation','開啓不穩定化！<br>('+format(unstableStarsAfterActivation)+'不穩定恆星)')
 				updateElement('destabilizationWarning','<b>警告</b>:如果你不穩定化恆星，你會失去全部生產器！')
-				updateElement('destabilizationInterval','間隔: '+formatTime(dsInterval)+'/tick')
-				updateElement('destabilizationTime','時間: '+format(dsTime,2,1)+' ticks')
+				updateElement('destabilizationInterval','間隔: '+formatTime(dsInterval)+'/刻')
+				updateElement('destabilizationTime','時間: '+format(dsTime,2,1)+'刻')
 				updateElement('destabilizationPercentage','開啓後的不穩定恆星的對數百分比: '+dsPercentage.toPrecision(4)+'%')		
 				for (a=1;a<5;a++) {
 					if ((a<3&&player.destabilization.upgrades[a-1]==20)||(a==4&&player.destabilization.upgrades[3]==1)) {
@@ -3571,7 +3571,7 @@ function gameTick() {
 			}
 		}
 		if (SNTab=='aliens') {
-			updateElement('aliens','你擁有<b>'+player.aliens.amount+'</b>'+(player.aliens.kept>0?' (+'+player.aliens.kept+')':'')+'外星人，轉換過來就是<b>'+totalAliens+'</b>免費中子加成力量')
+			updateElement('aliens','你擁有<b>'+player.aliens.amount+'</b>'+(player.aliens.kept>0?' (+'+player.aliens.kept+')':'')+'外星人，轉換過來就是<b>'+totalAliens+'</b>免費中子加成冪')
 			if (player.aliens.amount<60) {
 				showElement('alienProgress','inline')
 				showElement('aliensLeft','inline-block')
