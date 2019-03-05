@@ -3043,11 +3043,11 @@ function gameTick() {
 				showElement('statsPrevSupernova'+(a+1),displayType)
 				var message=''
 				if (player.lastSupernovas[a][3]>1) {
-					message=message+format(player.lastSupernovas[a][3]-1,0,2)+' supernovas and '
+					message=message+format(player.lastSupernovas[a][3]-1,0,2)+'超新星和'
 				}
 				message=message+formatTime(player.lastSupernovas[a][0])
 				if (player.lastSupernovas[a][2].gt(1)) {
-					message=message+'<br>('+format(player.lastSupernovas[a][1])+' stars, +'+format(player.lastSupernovas[a][2])+' NS; '+formatRate(player.lastSupernovas[a][2].div(player.lastSupernovas[a][0]),'NS')+')'
+					message=message+'<br>('+format(player.lastSupernovas[a][1])+'恆星，+'+format(player.lastSupernovas[a][2])+'中子星; '+formatRate(player.lastSupernovas[a][2].div(player.lastSupernovas[a][0]),'NS')+')'
 				}
 				updateElement('statsPrevSupernova'+(a+1)+'Value',message)
 			}
