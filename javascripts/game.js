@@ -3501,7 +3501,7 @@ function gameTick() {
 					case 2: currentText='冪(中子星): +'+format(player.neutronBoosts.powers[a],2,1)+(player.neutronBoosts.powers[2]<60?' (+1)':'')
 					break
 					
-					case 3: currentText='底數: '+(Math.round(1e3+100*Math.sqrt(player.neutronBoosts.basePower))/100)+((player.neutronBoosts.basePower<10)?' (+'+(Math.round(100*(Math.sqrt(player.neutronBoosts.basePower+1)-Math.sqrt(player.neutronBoosts.basePower)))/100)+')':'')
+					case 3: currentText='基數: '+(Math.round(1e3+100*Math.sqrt(player.neutronBoosts.basePower))/100)+((player.neutronBoosts.basePower<10)?' (+'+(Math.round(100*(Math.sqrt(player.neutronBoosts.basePower+1)-Math.sqrt(player.neutronBoosts.basePower)))/100)+')':'')
 					break
 					
 					case 4: currentText='<b>x'+format(neutronBoostPP)+'</b>，給予聲望力量獲得數增加<br>冪(聲望): '+player.neutronBoosts.ppPower+((player.neutronBoosts.ppPower<0.15)?' (+0.0375)':'')
@@ -3575,13 +3575,13 @@ function gameTick() {
 			if (player.aliens.amount<60) {
 				showElement('alienProgress','inline')
 				showElement('aliensLeft','inline-block')
-				updateElement('alienProgress','Progress for next alien: '+player.aliens.progress+'%')
-				updateElement('aliensLeft','Time left till '+(60+player.aliens.kept)+' aliens: '+formatTime((6000-player.aliens.amount*100-player.aliens.progress)/Math.pow(2,player.aliens.resets)))
+				updateElement('alienProgress','下一個外星人的進度: '+player.aliens.progress+'%')
+				updateElement('aliensLeft','至到'+(60+player.aliens.kept)+'外星人的時間: '+formatTime((6000-player.aliens.amount*100-player.aliens.progress)/Math.pow(2,player.aliens.resets)))
 			} else {
 				hideElement('alienProgress')
 				hideElement('aliensLeft')
 			}
-			updateElement('prestigeAliens','Explode your stars but free NB power instead<br>'+player.aliens.resets+'/5')
+			updateElement('prestigeAliens','爆炸你的恆星，但可獲得免費中子加成冪<br>'+player.aliens.resets+'/5')
 		}
 	}
 	if (tab=='hypernova') {
@@ -3599,7 +3599,7 @@ function gameTick() {
 		if (HNTab=='stellarpillars') {
 			updateElement('stellarPillarsNeutrons','你擁有<b>'+format(player.neutrons)+'</b>中子，將普通生產器的成本減少<b>'+format(neutronPower)+'x</b> (中子力量)')
 			if (ntpps[0].eq(0)) {
-				updateElement('stellarPillarsNeutronsRate','<b>0</b> neutrons/s')
+				updateElement('stellarPillarsNeutronsRate','每秒可獲得<b>0</b>中子')
 			} else {
 				updateElement('stellarPillarsNeutronsRate','<b>'+format(ntpps[0],(ntpps[0].gte(1000))?2:1,0,false)+'</b> neutrons/s ('+format(ntpps[0].div(player.neutrons).times(100),2,0,false)+'%)')
 			}
@@ -3624,7 +3624,7 @@ function gameLoop() {
 			try {
 				gameTick()
 			} catch (e) {
-				console.log('A game error has occured:')
+				console.log('發生了錯誤:')
 				console.error(e)
 			}
 			tickspeed=Math.max((new Date().getTime()-startTime)*0.2+tickspeed*0.8,1000/player.updateRate)
