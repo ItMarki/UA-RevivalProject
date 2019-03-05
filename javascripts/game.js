@@ -2599,7 +2599,7 @@ function gameTick() {
 	}
     if (player.supernovaTabsUnlocked>4) {
 		showElement('unstableStars','block')
-		updateElement('unstableStars','<b>'+format(player.destabilization.unstableStars)+'</b> unstable')
+		updateElement('unstableStars','<b>'+format(player.destabilization.unstableStars)+'</b>不穩定恆星')
     } else {
 		hideElement('unstableStars')
     }
