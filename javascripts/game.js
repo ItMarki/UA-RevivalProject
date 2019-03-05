@@ -3601,7 +3601,7 @@ function gameTick() {
 			if (ntpps[0].eq(0)) {
 				updateElement('stellarPillarsNeutronsRate','每秒可獲得<b>0</b>中子')
 			} else {
-				updateElement('stellarPillarsNeutronsRate','<b>'+format(ntpps[0],(ntpps[0].gte(1000))?2:1,0,false)+'</b> neutrons/s ('+format(ntpps[0].div(player.neutrons).times(100),2,0,false)+'%)')
+				updateElement('stellarPillarsNeutronsRate','<b>'+format(ntpps[0],(ntpps[0].gte(1000))?2:1,0,false)+'</b> 每秒的中子 ('+format(ntpps[0].div(player.neutrons).times(100),2,0,false)+'%)')
 			}
 		}
 	}
