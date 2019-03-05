@@ -436,30 +436,30 @@ function formatCosts(number) {
 			var first=number.mantissa.toFixed(1)+'/'
 			if (exponent<3) return first+Math.pow(10,exponent)
 		}
-		if (notationChoosed=='標準') {
+		if (notationChoosed=='Standard') {
 			var abbid=Math.floor(exponent/3)-1
 			var remainder=exponent%3
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+abbreviation(abbid)
-		} else if (notationChoosed=='長級差制') {
+		} else if (notationChoosed=='Long scale') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+abbreviationLong(abbid)
-		} else if (notationChoosed=='短標準') {
+		} else if (notationChoosed=='Standard (short)') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+abbreviationShort(abbid)
-		} else if (notationChoosed=='字母') {
+		} else if (notationChoosed=='Letters') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+letter(abbid)
-		} else if (notationChoosed=='科學') {
+		} else if (notationChoosed=='Scientific') {
 			if (exponent>99999) {
 				var exponentExponent=Math.floor(Math.log10(exponent))
 				var exponentMantissa=exponent/Math.pow(10,exponentExponent)
 				return first+'1.00e'+exponentMantissa.toFixed(2)+'e'+exponentExponent
 			}
 			return first+'1.00e'+exponent
-		} else if (notationChoosed=='工程') {
+		} else if (notationChoosed=='Engineering') {
 			var remainder=exponent%3
 			var exponent=exponent-remainder
 			if (exponent>99999) {
@@ -470,20 +470,20 @@ function formatCosts(number) {
 				return first+Math.pow(10,remainder).toFixed(2-remainder)+'e'+(exponentMantissa*Math.pow(10,exponentRemainder)).toFixed(2-exponentRemainder)+'e'+exponentExponent
 			}
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+'e'+exponent
-		} else if (notationChoosed=='對數') {
+		} else if (notationChoosed=='Logarithm') {
 			if (exponent>99999) {
 				var logLog=Math.log10(exponent)
 				return first+'ee'+logLog.toFixed(2)
 			}
 			return first+'e'+exponent+'.00'
-		} else if (notationChoosed=='自然對數') {
+		} else if (notationChoosed=='Natural logarithm') {
 			var log=exponent*2.302585092994046
 			if (log>=1e5) {
 				var logLog=Math.log10(log)*2.302585092994046
 				return first+'e<sup>e^'+logLog.toFixed(2)+'</sup>'
 			}
 			return first+'e^'+log.toFixed(2)
-		} else if (notationChoosed=='複字母') {
+		} else if (notationChoosed=='Repoalphabet') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+sameletter(abbid)
@@ -494,17 +494,17 @@ function formatCosts(number) {
 				return first+logMantissa.toFixed(2)+'E'+logExponent+'#2'
 			}
 			return first+'1.00e'+exponent
-		} else if (notationChoosed=='原版') {
+		} else if (notationChoosed=='Original') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			if (abbid>100) return first+Math.pow(10,remainder).toFixed(2-remainder)+letter(abbid)
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+abbreviation(abbid-1)
-		} else if (notationChoosed=='結合') {
+		} else if (notationChoosed=='Hybrid') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			if (abbid>5) return first+Math.pow(10,remainder).toFixed(2-remainder)+letter(abbid+23)
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+abbreviation(abbid-1)
-		} else if (notationChoosed=='無限') {
+		} else if (notationChoosed=='Infinity') {
 			var log=exponent/maxValueLog
 			var logLog=Math.floor(Math.log10(log))
 			if (logLog>6) {
@@ -512,31 +512,31 @@ function formatCosts(number) {
 				return '&#x221e;<sup>&#x221e;^'+logLog.toFixed(6)+'</sup>'
 			}
 			return first+'&#x221e;^'+log.toFixed(Math.min(6-logLog,4))
-		} else if (notationChoosed=='平方指數') {
+		} else if (notationChoosed=='Square exponent') {
 			var srLog=Math.sqrt(exponent)
 			if (srLog>=1e5) {
 				var srLogLog=Math.floor(Math.log10(srLog))
 				return first+'e(e('+srLogLog.toFixed(4)+'^2)^2)'
 			}
 			return first+'e('+srLog.toFixed(4)+'^2)'
-		} else if (notationChoosed=='多項式指數') {
+		} else if (notationChoosed=='Polynominal exponent') {
 			var peLog=Math.log10(exponent)/maxValueLogLog
 			return first+'10<sup>log<sub>10</sub>(&#x221e;)^'+peLog.toFixed(4)+'</sup>'
-		} else if (notationChoosed=='顏色') {
+		} else if (notationChoosed=='Color') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+getColor(abbid)
-		} else if (notationChoosed=='多顏色') {
+		} else if (notationChoosed=='Megacolor') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+getMegacolor(abbid)
-		} else if (notationChoosed=='進度') {
+		} else if (notationChoosed=='Progress') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			return first+Math.pow(10,remainder).toFixed(2-remainder)+getProgress(abbid)
 		} else if (notationChoosed=='CIF') {
 			return first+CIFformat(Decimal.pow(10,exponent))
-		} else if (notationChoosed=='過於複雜') {
+		} else if (notationChoosed=='Overcomplicated') {
 			var abbid=Math.floor(exponent/3)
 			var remainder=exponent%3
 			return first+'<text style="'+getOvercomplicated(abbid)+'">'+Math.pow(10,remainder).toFixed(2-remainder)+'</text>'
