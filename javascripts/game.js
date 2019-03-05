@@ -99,11 +99,11 @@ ordinals=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th']
 lastSave=0
 timeSinceSave=0
 themeSelected='Normal'
-milestoneRequirements=['購買你第一個第級生產器','購買你第一個第二級生產器','購買你第一個第三級生產器','購買你第一個第四級生產器','購買你第一個第五級生產器','購買你第一個第六級生產器','購買你第一個第七級生產器','購買你第一個第八級生產器','購買你第一個第九級生產器','購買你第一個第十級生產器',
+milestoneRequirements=['購買你第一個第一級生產器','購買你第一個第二級生產器','購買你第一個第三級生產器','購買你第一個第四級生產器','購買你第一個第五級生產器','購買你第一個第六級生產器','購買你第一個第七級生產器','購買你第一個第八級生產器','購買你第一個第九級生產器','購買你第一個第十級生產器',
 	'購買你5個第十級生產器',' 第一次聲望','到達5倍聲望力量','到達10倍聲望力量','到達20倍聲望力量','到達50倍聲望力量','到達75倍聲望力量','第一次轉移','購買2轉移升級','購買4轉移升級',
-	'購買8轉移升級','購買12轉移升級','購買14轉移升級','第一次超新星','購買2超新星升級','購買4超新星升級','購買8超新星升級','購買12超新星升級','總共獲得100中子','Unlock challenges',
-	'Complete a challenge','Complete 2 challenges','Complete 4 challenges','Complete 8 challenges','Complete 12 challenges','Max all of autobuyer upgrades','Buy 1 buyinshop feature','Buy 2 buyinshop features','Buy 4 buyinshop features','Break limit!',
-	'Buy all buyinshop features','Reach 5 neutron boost power','Reach 10 neutron boost power','Reach 20 neutron boost power','Buy your first neutron tier 1 generator','Buy your first neutron tier 2 generator','Buy your first neutron tier 3 generator','Buy your first neutron tier 5 generator','Buy your first neutron tier 8 generator','Buy your first neutron tier 10 generator']
+	'購買8轉移升級','購買12轉移升級','購買14轉移升級','第一次超新星','購買2超新星升級','購買4超新星升級','購買8超新星升級','購買12超新星升級','總共獲得100中子','解鎖挑戰',
+	'完成1個挑戰','完成2個挑戰','完成4個挑戰','完成8個挑戰','完成12個挑戰','最大全部自動購買升級','購買1個購購商店特徵','購買2個購購商店特徵','購買4個購購商店特徵','破裂限制！',
+	'購買全部購購商店特徵','到達5中子加成力量','到達10中子加成力量','到達20中子加成力量','購買你第一個中子第一級生產器','購買你第一個中子第二級生產器','購買你第一個中子第三級生產器','購買你第一個中子第五級生產器','購買你第一個中子第八級生產器','購買你第一個中子第十級生產器']
 storyMessages=['Breakfast is ready!','Sorry, but this breakfast belongs to yo- oh wait..','Our home got invaded by aliens! Oh no, we need to do something!','Quick, put on your clothes and lets go with your parents!','Phew, that was close. We are going to the planet who invaded us.','We made it to the airport, lets fly around to the rocket!','And here we are. I could control the rocket, if I was the owner.','This is it, get your spacesuit on.','Blast off! We are going to the planet that invaded us!','Oooo, stars are shiny. Wait a minute... whenever I see, I see too many stars. Who did this?',
 	'The person that generated stars must be the god of stellar.','Oh no! All of our favorite stars are gone! What should I do now?!','Wait a minute, this guy reproduces everything! He must be fantastic for remaking our favorite stars too!','Get ready... we are now raiding somewhere that invaded us!']
 achList={names:['Speedrunner','I don\'t need those','What are you doing?','We can\'t show tier 11','Supernova Demon','Is the person Todd Rogers?','Do I really need to upgrade?','Challenge Speedway','Renewed Novas'],
