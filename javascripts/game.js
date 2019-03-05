@@ -3324,7 +3324,7 @@ function gameTick() {
 							updateElement('chall'+a+'button','Start')
 							updateClass('chall'+a+'button','longButton')
 						}
-						updateElement('chall'+a+'comp',(timesCompleted==0)?'':'Completed '+format(timesCompleted)+' time'+((timesCompleted==1)?'':'s'))
+						updateElement('chall'+a+'comp',(timesCompleted==0)?'':'完成了'+format(timesCompleted)+'次'+((timesCompleted==1)?'':''))
 					}
 				}
 			}
