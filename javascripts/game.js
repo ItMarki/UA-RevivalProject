@@ -146,7 +146,7 @@ timeframes={年:31556952,
 	日:86400,
 	小時:3600,
 	分鐘:60,
-	second:1}	
+	秒:1}	
 notOnFocus=true
 notOnShift=1
 
@@ -368,11 +368,11 @@ function format(number,decimalPoints=2,offset=0,rounded=true) {
 
 function formatTime(s) {
 	if (s < 1) {
-		if (s < 0.002) return '1 毫秒'
-		return Math.floor(s*1000)+' 毫秒'
+		if (s < 0.002) return '1毫秒'
+		return Math.floor(s*1000)+'毫秒'
 	} else if (s < 59.5) {
-		if (s < 1.005) return '1 秒'
-		return s.toPrecision(2)+' 秒'
+		if (s < 1.005) return '1秒'
+		return s.toPrecision(2)+'秒'
 	} else if (s < Number.POSITIVE_INFINITY) {
 		var timeFormat=''
 		var lastTimePart=''
@@ -391,13 +391,13 @@ function formatTime(s) {
 							needComma=true
 						}
 					}
-					lastTimePart=s+(s==1?' 秒':' 秒')
+					lastTimePart=s+(s==1?'秒':'秒')
 				}
 			} else if (id=='year') {
 				var amount=Math.floor(s/31556952)
 				if (amount>0) {
 					s-=amount*31556952
-					lastTimePart=format(amount,2,1)+(amount==1?' 年':' 年')
+					lastTimePart=format(amount,2,1)+(amount==1?'年':'年')
 				}
 			} else {
 				var amount=Math.floor(s/timeframes[id])
@@ -412,11 +412,11 @@ function formatTime(s) {
 							needComma=true
 						}
 					}
-					lastTimePart=amount+' '+id+(amount==1?'':'s')
+					lastTimePart=amount+' '+id+(amount==1?'':'')
 				}
 			}
 		}
-		return timeFormat+(needComma?',':'')+(needAnd?' and ':'')+lastTimePart
+		return timeFormat+(needComma?',':'')+(needAnd?'和':'')+lastTimePart
 	} else {
 		return '永恆'
 	}
