@@ -2955,12 +2955,12 @@ function gameTick() {
 		if (genTab=='neutronTiers') {
 			updateElement('neutrons','你擁有<b>'+format(player.neutrons)+'</b>中子，將普通生產器的成本減少<b>'+format(neutronPower)+'x</b> (中子力量).')
 			if (ntpps[0].eq(0)) {
-				updateElement('neutronsRate','You are producing <b>0</b> neutrons per second.')
+				updateElement('neutronsRate','你每秒可以得到<b>0</b>中子。')
 			} else {
-				updateElement('neutronsRate','You are producing <b>'+format(ntpps[0],(ntpps[0].gte(1000))?2:1,0,false)+'</b> neutrons per second. ('+format(ntpps[0].div(player.neutrons).times(100),2,0,false)+'%)')
+				updateElement('neutronsRate','你每秒可以得到<b>'+format(ntpps[0],(ntpps[0].gte(1000))?2:1,0,false)+'</b>中子。 ('+format(ntpps[0].div(player.neutrons).times(100),2,0,false)+'%)')
 			}
 			for (a=0;a<10;a++) {
-				var currentText='<b>Neutron tier '+(a+1)+' generator</b><br>'
+				var currentText='<b>第'+(a+1)+'級中子生產器</b><br>'
 				if (player.neutronTiers[a].amount.eq(player.neutronTiers[a].bought)||a==9) {
 					currentText=currentText+format(player.neutronTiers[a].amount,0,1)
 				} else {
