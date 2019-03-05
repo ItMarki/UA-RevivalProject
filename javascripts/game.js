@@ -141,11 +141,11 @@ showMilestoneTimeout=null
 clickedWrong=0
 
 keysPressed=[]
-timeframes={year:31556952,
-	month:2629746,
-	day:86400,
-	hour:3600,
-	minute:60,
+timeframes={年:31556952,
+	月:2629746,
+	日:86400,
+	小時:3600,
+	分鐘:60,
 	second:1}	
 notOnFocus=true
 notOnShift=1
