@@ -3484,7 +3484,7 @@ function gameTick() {
 		if (SNTab=='neutronboosts') {
 			updateElement('breakLimit',(player.breakLimit?'修補':'破裂')+'限制')
 			updateElement('preSupernova','前超新星模式:<br>'+(player.preSupernova?'開':'關'))
-			updateTooltipBase('neutronboost','x'+(Math.round(1e3+100*Math.sqrt(player.neutronBoosts.basePower))/100)+'<sup>'+format(Decimal.add(player.neutronBoosts.powers[0],player.neutronBoosts.powers[1]).add(player.neutronBoosts.powers[2]),2,1)+(totalAliens>0?' (+ '+totalAliens+')':'')+'</sup> = <b>x'+format(neutronBoost)+'</b> for all production')
+			updateTooltipBase('neutronboost','x'+(Math.round(1e3+100*Math.sqrt(player.neutronBoosts.basePower))/100)+'<sup>'+format(Decimal.add(player.neutronBoosts.powers[0],player.neutronBoosts.powers[1]).add(player.neutronBoosts.powers[2]),2,1)+(totalAliens>0?' (+ '+totalAliens+')':'')+'</sup> = <b>x'+format(neutronBoost)+'</b>，給予全部生產力')
 			
 			var items=['powerStars','powerTP','powerNS','basePower','ppPower']
 			var boostType=['stars','transfer points','neutron stars']
@@ -3492,19 +3492,19 @@ function gameTick() {
 			for (a=0;a<5;a++) {
 				var currentText=''
 				switch (a) {
-					case 0: currentText='Power (stars): +'+player.neutronBoosts.powers[0]+(player.neutronBoosts.powers[0]<40?' (+1)':'')
+					case 0: currentText='冪(恆星): +'+player.neutronBoosts.powers[0]+(player.neutronBoosts.powers[0]<40?' (+1)':'')
 					break
 					
-					case 1: currentText='Power (transfer points): +'+format(player.neutronBoosts.powers[a],2,1)+(player.neutronBoosts.powers[1]<40?' (+1)':'')
+					case 1: currentText='冪(轉移點數): +'+format(player.neutronBoosts.powers[a],2,1)+(player.neutronBoosts.powers[1]<40?' (+1)':'')
 					break
 					
-					case 2: currentText='Power (neutron stars): +'+format(player.neutronBoosts.powers[a],2,1)+(player.neutronBoosts.powers[2]<60?' (+1)':'')
+					case 2: currentText='冪(中子星): +'+format(player.neutronBoosts.powers[a],2,1)+(player.neutronBoosts.powers[2]<60?' (+1)':'')
 					break
 					
-					case 3: currentText='Base: '+(Math.round(1e3+100*Math.sqrt(player.neutronBoosts.basePower))/100)+((player.neutronBoosts.basePower<10)?' (+'+(Math.round(100*(Math.sqrt(player.neutronBoosts.basePower+1)-Math.sqrt(player.neutronBoosts.basePower)))/100)+')':'')
+					case 3: currentText='底數: '+(Math.round(1e3+100*Math.sqrt(player.neutronBoosts.basePower))/100)+((player.neutronBoosts.basePower<10)?' (+'+(Math.round(100*(Math.sqrt(player.neutronBoosts.basePower+1)-Math.sqrt(player.neutronBoosts.basePower)))/100)+')':'')
 					break
 					
-					case 4: currentText='<b>x'+format(neutronBoostPP)+'</b> for PP gain increase<br>Power (prestige): '+player.neutronBoosts.ppPower+((player.neutronBoosts.ppPower<0.15)?' (+0.0375)':'')
+					case 4: currentText='<b>x'+format(neutronBoostPP)+'</b>，給予聲望力量獲得數增加<br>冪(聲望): '+player.neutronBoosts.ppPower+((player.neutronBoosts.ppPower<0.15)?' (+0.0375)':'')
 					break
 				}
 				updateElement(items[a],currentText)
