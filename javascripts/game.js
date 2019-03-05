@@ -2964,7 +2964,7 @@ function gameTick() {
 				if (player.neutronTiers[a].amount.eq(player.neutronTiers[a].bought)||a==9) {
 					currentText=currentText+format(player.neutronTiers[a].amount,0,1)
 				} else {
-					currentText=currentText+format(player.neutronTiers[a].amount)+' ('+format(ntpps[a+1],(ntpps[a+1].gte(1000))?2:1,0,false)+'/s), '+format(player.neutronTiers[a].bought,2,1)+' bought'
+					currentText=currentText+format(player.neutronTiers[a].amount)+' ('+format(ntpps[a+1],(ntpps[a+1].gte(1000))?2:1,0,false)+'/s), '+format(player.neutronTiers[a].bought,2,1)+'已購買'
 				}
 				var name='nt'+(a+1)+'Gen'
 				var lastLine='成本: '+formatNSCosts(costs.neutronTiers[a])
@@ -2975,7 +2975,7 @@ function gameTick() {
 				if (a==9||player.neutronTiers[a].amount.eq(player.neutronTiers[a].bought)) {
 					currentText=currentText+format(player.neutronTiers[a].amount,0,1)
 				} else {
-					currentText=currentText+format(player.neutronTiers[a].amount)+' ('+format(ntpps[a+1],(ntpps[a+1].gte(1000))?2:1,0,false)+'/s), '+format(player.neutronTiers[a].bought,2,1)+' bought'
+					currentText=currentText+format(player.neutronTiers[a].amount)+' ('+format(ntpps[a+1],(ntpps[a+1].gte(1000))?2:1,0,false)+'/s), '+format(player.neutronTiers[a].bought,2,1)+'已購買'
 					tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Growth rate: '+format(ntpps[a+1].div(player.neutronTiers[a].amount).times(100),2,0,false)+'%'
 				}
 				if (player.neutronTiers[a].amount.gt(0)) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Production for 1 generator: '+format(ntppsSingles[a],(ntppsSingles[a].gte(1000))?2:1,0,false)+'/s'
