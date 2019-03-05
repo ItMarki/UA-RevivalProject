@@ -1559,13 +1559,13 @@ function switchTab(tabName) {
 
 function switchTheme() {
 	if (player.theme=='Normal') {
-		player.theme='光亮'
+		player.theme='Light'
 	} else if (player.theme=='Light') {
-		player.theme='原版'
+		player.theme='Original'
 	} else if (player.theme=='Original') {
-		player.theme='色盲'
+		player.theme='Colorblind'
 	} else {
-		player.theme='普通'
+		player.theme='Normal'
 	}
 	updateTheme(player.theme)
 }
