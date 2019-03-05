@@ -3187,7 +3187,7 @@ function gameTick() {
 		if (SNTab=='upgrades') {
 			if (player.supernovaUpgrades.includes(2)||player.supernovaUpgrades.includes(3)) {
 				showElement('headstart','inline-block')
-				updateElement('headstart','Headstarts:<br>'+(player.headstarts?'On':'Off'))
+				updateElement('headstart','起先優勢:<br>'+(player.headstarts?'開':'關'))
 			} else {
 				hideElement('headstart')
 			}
