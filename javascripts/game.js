@@ -1514,10 +1514,10 @@ function updateMilestones() {
 	var temp=1
 	do {
 		if (player.achievements.includes(temp)) {
-			updateElement('ach'+temp,'Completed')
+			updateElement('ach'+temp,'完成')
 			updateClass('ach'+temp,'achCompleted')
 		} else {
-			updateElement('ach'+temp,'Incomplete')
+			updateElement('ach'+temp,'未完成')
 			updateClass('ach'+temp,'ach')
 		}
 		temp++
@@ -3315,13 +3315,13 @@ function gameTick() {
 						showElement('chall'+a,'table-cell')
 						var timesCompleted=(player.challengesCompleted[a]==undefined)?0:player.challengesCompleted[a]
 						if (player.currentChallenge==a) {
-							updateElement('chall'+a+'button','Running')
+							updateElement('chall'+a+'button','進行中')
 							updateClass('chall'+a+'button','shopUnafford')
 						} else if (timesCompleted>0) {
-							updateElement('chall'+a+'button','Completed')
+							updateElement('chall'+a+'button','已完成')
 							updateClass('chall'+a+'button','boughtUpgrade')
 						} else {
-							updateElement('chall'+a+'button','Start')
+							updateElement('chall'+a+'button','開始')
 							updateClass('chall'+a+'button','longButton')
 						}
 						updateElement('chall'+a+'comp',(timesCompleted==0)?'':'完成了'+format(timesCompleted)+'次'+((timesCompleted==1)?'':''))
@@ -3341,16 +3341,16 @@ function gameTick() {
 					} else {
 						showElement('neutronChall'+a,'table-cell')
 						if (player.currentChallenge==a) {
-							updateElement('neutronChall'+a+'button','Running')
+							updateElement('neutronChall'+a+'button','進行中')
 							updateClass('neutronChall'+a+'button','shopUnafford')
 						} else if (timesCompleted>0) {
-							updateElement('neutronChall'+a+'button','Completed')
+							updateElement('neutronChall'+a+'button','已完成')
 							updateClass('neutronChall'+a+'button','boughtUpgrade')
 						} else {
-							updateElement('neutronChall'+a+'button','Start')
+							updateElement('neutronChall'+a+'button','開始')
 							updateClass('neutronChall'+a+'button','longButton')
 						}
-						updateElement('neutronChall'+a+'comp',(timesCompleted==0)?'':'Completed '+format(timesCompleted)+' time'+((timesCompleted==1)?'':'s'))
+						updateElement('neutronChall'+a+'comp',(timesCompleted==0)?'':'完成了'+format(timesCompleted)+'次'+((timesCompleted==1)?'':''))
 					}
 				}
 			}
