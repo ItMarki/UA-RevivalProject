@@ -368,11 +368,11 @@ function format(number,decimalPoints=2,offset=0,rounded=true) {
 
 function formatTime(s) {
 	if (s < 1) {
-		if (s < 0.002) return '1毫秒'
-		return Math.floor(s*1000)+'毫秒'
+		if (s < 0.002) return '1 毫秒'
+		return Math.floor(s*1000)+' 毫秒'
 	} else if (s < 59.5) {
-		if (s < 1.005) return '1秒'
-		return s.toPrecision(2)+'秒'
+		if (s < 1.005) return '1 秒'
+		return s.toPrecision(2)+' 秒'
 	} else if (s < Number.POSITIVE_INFINITY) {
 		var timeFormat=''
 		var lastTimePart=''
