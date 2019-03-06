@@ -3454,8 +3454,8 @@ function gameTick() {
 			}
 			if (player.buyinshopFeatures.includes(7)) {
 				showElement('preBreakAutonovaOptions','table-cell')
-				updateElement('preBreakAutonovaTime','Occurs '+((player.preBreakAutonovaOptions.time==Number.MAX_VALUE)?'frequently':(player.preBreakAutonovaOptions.time==0)?'never':' in sub-'+player.preBreakAutonovaOptions.time+'s supernova'))
-				updateElement('preBreakAutonovaOverlimit','Occurs in '+format(player.preBreakAutonovaOptions.overlimit?'5.592438960924321e400':Number.MAX_VALUE)+' stars')
+				updateElement('preBreakAutonovaTime','在此條件下發生: '+((player.preBreakAutonovaOptions.time==Number.MAX_VALUE)?'經常':(player.preBreakAutonovaOptions.time==0)?'永不':' 在下'+player.preBreakAutonovaOptions.time+'秒的超新星'))
+				updateElement('preBreakAutonovaOverlimit','在此條件下發生: '+format(player.preBreakAutonovaOptions.overlimit?'5.592438960924321e400':Number.MAX_VALUE)+'恆星')
 			} else {
 				hideElement('preBreakAutonovaOptions')
 			}
