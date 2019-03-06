@@ -2864,7 +2864,7 @@ function gameTick() {
 				if (!showPrestigeButton&&player.showProgress) {
 					if (player.destabilization.timeLeft>0&&player.destabilization.upgrades[3]==0) {
 						showElement('prestigeProgress','block')
-						updateElement('prestigeProgress','<b>Progress to prestige</b>: Wait until destabilization is finished, or transfer!')
+						updateElement('prestigeProgress','<b>往聲望的進度</b>: 請等待不穩定化完成，或者轉移！')
 					} else {
 						var pp=player.prestigePower.log10()
 						var gpp=getPrestigePower()
@@ -2877,12 +2877,12 @@ function gameTick() {
 						}
 						showElement('prestigeProgress','block')
 						if (percentage<0) {
-							updateElement('prestigeProgress','<b>Progress to prestige</b>: 0.00%')
+							updateElement('prestigeProgress','<b>往聲望的進度</b>: 0.00%')
 						} else if (percentage>0.99995) {
-							if (pp>=500) updateElement('prestigeProgress','<b>Progress to prestige</b>: '+format(Decimal.add(player.prestigePower.div(gpp).log10(),0.01),2,0,false)+' OoM left')
-							else updateElement('prestigeProgress','<b>Progress to prestige</b>: 99.99%')
+							if (pp>=500) updateElement('prestigeProgress','<b>往聲望的進度</b>: '+format(Decimal.add(player.prestigePower.div(gpp).log10(),0.01),2,0,false)+' OoM left')
+							else updateElement('prestigeProgress','<b>往聲望的進度</b>: 99.99%')
 						} else {
-							updateElement('prestigeProgress','<b>Progress to prestige</b>: '+Decimal.times(percentage,100).toFixed(2)+'%')
+							updateElement('prestigeProgress','<b>往聲望的進度</b>: '+Decimal.times(percentage,100).toFixed(2)+'%')
 						}
 					}
 				} else {
@@ -2917,7 +2917,7 @@ function gameTick() {
 			}
 			if (((player.currentChallenge==8||player.currentChallenge==13)&&player.generators[0].amount.gt(0))||player.currentChallenge==11) {
 				showElement('challPow','block')
-				updateElement('challPow','挑戰'+player.currentChallenge+' 力量: <b>x'+format(player.challPow,3,0,false)+'</b>')
+				updateElement('challPow','挑戰'+player.currentChallenge+'力量: <b>x'+format(player.challPow,3,0,false)+'</b>')
 			} else {
 				hideElement('challPow')
 			}
@@ -2925,7 +2925,7 @@ function gameTick() {
 				showElement('transferProgress','block')
 				var percentage=player.prestigePower.log10()/2
 				if (percentage>0.99995) updateElement('transferProgress','<b>往轉移的進度</b>: 99.99%')
-				else updateElement('transferProgress','<b>Progress to transfer</b>: '+(percentage*100).toFixed(2)+'%')
+				else updateElement('transferProgress','<b>往轉移的進度</b>: '+(percentage*100).toFixed(2)+'%')
 			} else {
 				hideElement('transferProgress')
 			}
@@ -2938,16 +2938,16 @@ function gameTick() {
 					var percentage=player.stars.add(1).log10()/maxValueLog
 					var type=(player.currentChallenge>0)?'challenge goal':'supernova'
 				}
-				if (percentage>0.99995) updateElement('supernovaProgress','<b>Progress to '+type+'</b>: 99.99%')
-				else updateElement('supernovaProgress','<b>Progress to '+type+'</b>: '+(percentage*100).toFixed(2)+'%')
+				if (percentage>0.99995) updateElement('supernovaProgress','<b>往'+type+'的進度</b>: 99.99%')
+				else updateElement('supernovaProgress','<b>往'+type+'的進度</b>: '+(percentage*100).toFixed(2)+'%')
 			} else {
 				hideElement('supernovaProgress')
 			}
 			if (!showTooMuch&&player.showProgress&&player.breakLimit&&player.neutronStars.lt(Number.MAX_VALUE)) {
 				showElement('hypernovaProgress','block')
 				var percentage=player.neutronStars.add(1).log10()/maxValueLog
-				if (percentage>0.99995) updateElement('hypernovaProgress','<b>Progress to hypernova</b>: 99.99%')
-				else updateElement('hypernovaProgress','<b>Progress to hypernova</b>: '+(percentage*100).toFixed(2)+'%')
+				if (percentage>0.99995) updateElement('hypernovaProgress','<b>往極超新星的進度</b>: 99.99%')
+				else updateElement('hypernovaProgress','<b>往極超新星的進度</b>: '+(percentage*100).toFixed(2)+'%')
 			} else {
 				hideElement('hypernovaProgress')
 			}
@@ -2976,9 +2976,9 @@ function gameTick() {
 					currentText=currentText+format(player.neutronTiers[a].amount,0,1)
 				} else {
 					currentText=currentText+format(player.neutronTiers[a].amount)+' ('+format(ntpps[a+1],(ntpps[a+1].gte(1000))?2:1,0,false)+'/s), '+format(player.neutronTiers[a].bought,2,1)+'已購買'
-					tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Growth rate: '+format(ntpps[a+1].div(player.neutronTiers[a].amount).times(100),2,0,false)+'%'
+					tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'生長率: '+format(ntpps[a+1].div(player.neutronTiers[a].amount).times(100),2,0,false)+'%'
 				}
-				if (player.neutronTiers[a].amount.gt(0)) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'Production for 1 generator: '+format(ntppsSingles[a],(ntppsSingles[a].gte(1000))?2:1,0,false)+'/s'
+				if (player.neutronTiers[a].amount.gt(0)) tooltipText=(tooltipText==''?'':tooltipText+'<br>')+'一個生產器的生產力: '+format(ntppsSingles[a],(ntppsSingles[a].gte(1000))?2:1,0,false)+'/s'
 				if (tooltipText=='') disableTooltip('nt'+(a+1)+'Gen')
 				else {
 					enableTooltip('nt'+(a+1)+'Gen')
@@ -3080,7 +3080,7 @@ function gameTick() {
 		}
 	}
 	if (tab=='options') {
-		updateElement('saveGame','保存<br>('+(timeSinceSave==1?'1 秒':timeSinceSave+' 秒')+' 前)')
+		updateElement('saveGame','保存<br>('+(timeSinceSave==1?'1 秒':timeSinceSave+' 秒')+'前)')
 		updateElement('notationOption','數據格式:<br>'+player.notation)
 		if (player.notation=='混合式') {
 			showElement('mixedOptionRow','table-row')
