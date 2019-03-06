@@ -416,7 +416,7 @@ function formatTime(s) {
 				}
 			}
 		}
-		return timeFormat+(needComma?',':'')+(needAnd?'和':'')+lastTimePart
+		return timeFormat+(needComma?',':'')+(needAnd?'':'')+lastTimePart
 	} else {
 		return '永恆'
 	}
