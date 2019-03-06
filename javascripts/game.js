@@ -3425,7 +3425,7 @@ function gameTick() {
 			}
 			if (player.buyinshopFeatures.includes(1) && player.autobuyers.gens !== undefined) {
 				showElement('bisBulkBuy','table-cell')
-				currentText='Bulk: '+format(player.autobuyers.gens.bulk)+'x<br>'
+				currentText='批量購買: '+format(player.autobuyers.gens.bulk)+'x<br>'
 				updateElement('bulkBuy',currentText)
 				currentText=''
 				if (player.autobuyers.gens.bulk==256&&!player.breakLimit) {
