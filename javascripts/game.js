@@ -3126,9 +3126,9 @@ function gameTick() {
 	}
 	if (tab=='transfer') {
 		explainList.tupg7='<b>Transfer upgrade <span style="font-size:66.6%">#7</span></b><br>This upgrade will allow you to be able to prestige with 1% of your stars as without the upgrade, which is equal to '+format(1e37)+' stars.<br>Prestige power gain is increased slighty after buying this upgrade.'
-		updateElement('tupg12button','成本: '+format(1000)+' TP')
-		updateElement('tupg13button','成本: '+format(3000)+' TP')
-		updateElement('tupg14button','成本: '+format(5000)+' TP')
+		updateElement('tupg12button','成本: '+format(1000)+' 轉移點數')
+		updateElement('tupg13button','成本: '+format(3000)+' 轉移點數')
+		updateElement('tupg14button','成本: '+format(5000)+' 轉移點數')
 		for (a=1;a<15;a++) {
 			var tooltipText=''
 			if (player.explanations) tooltipText=explainList['tupg'+a]
@@ -3511,7 +3511,7 @@ function gameTick() {
 				currentText=''
 				if ((a==2)?(player.neutronBoosts.powers[2]<60):(a==3)?(player.neutronBoosts.basePower<10):(a==4)?(player.neutronBoosts.ppPower<0.15):(player.neutronBoosts.powers[a]<40)) {
 					showElement(items[a]+'Cost','inline-block')
-					if ((a==2)?(player.neutronBoosts.powers[2]<60):(a==3)?(player.neutronBoosts.basePower<10):(a==4)?(player.neutronBoosts.ppPower<0.15):(player.neutronBoosts.powers[a]<40)) currentText=currentText+'成本: '+((a==0)?formatCosts(costs.neutronBoosts[a]):(a==1)?(format(costs.neutronBoosts[a])+' TP'):formatNSCosts(costs.neutronBoosts[a]))
+					if ((a==2)?(player.neutronBoosts.powers[2]<60):(a==3)?(player.neutronBoosts.basePower<10):(a==4)?(player.neutronBoosts.ppPower<0.15):(player.neutronBoosts.powers[a]<40)) currentText=currentText+'成本: '+((a==0)?formatCosts(costs.neutronBoosts[a]):(a==1)?(format(costs.neutronBoosts[a])+' 轉移點數'):formatNSCosts(costs.neutronBoosts[a]))
 					updateElement(items[a]+'Cost',currentText)
 					if ((a==2)?(player.neutronBoosts.powers[2]==60):(a==3)?(player.neutronBoosts.basePower==10):(a==4)?(player.neutronBoosts.ppPower==0.15):(player.neutronBoosts.powers[a]==40)) {
 						updateClass(items[a]+'Cost','boughtUpgrade')
