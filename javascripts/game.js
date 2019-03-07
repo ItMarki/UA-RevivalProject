@@ -1501,7 +1501,7 @@ function updateMilestones() {
 			updateElement('ms'+temp+'requirement','<b>里程碑'+temp+'</b>:<br>'+milestoneRequirements[temp-1])
 			var msCompletion='ms'+temp+'completion'
 			if (player.milestones>=temp) {
-				updateElement(msCompletion,message+'已完成'+((player.storyEnabled&&storyMessages.length>=temp)?'<br><b>故事</b>: '+storyMessages[temp-1]:''))
+				updateElement(msCompletion,message+'完成'+((player.storyEnabled&&storyMessages.length>=temp)?'<br><b>故事</b>: '+storyMessages[temp-1]:''))
 				updateClass(msCompletion,'achCompleted')
 			} else {
 				updateElement(msCompletion,message+'未完成')
@@ -3318,7 +3318,7 @@ function gameTick() {
 							updateElement('chall'+a+'button','進行中')
 							updateClass('chall'+a+'button','shopUnafford')
 						} else if (timesCompleted>0) {
-							updateElement('chall'+a+'button','已完成')
+							updateElement('chall'+a+'button','完成')
 							updateClass('chall'+a+'button','boughtUpgrade')
 						} else {
 							updateElement('chall'+a+'button','開始')
@@ -3344,7 +3344,7 @@ function gameTick() {
 							updateElement('neutronChall'+a+'button','進行中')
 							updateClass('neutronChall'+a+'button','shopUnafford')
 						} else if (timesCompleted>0) {
-							updateElement('neutronChall'+a+'button','已完成')
+							updateElement('neutronChall'+a+'button','完成')
 							updateClass('neutronChall'+a+'button','boughtUpgrade')
 						} else {
 							updateElement('neutronChall'+a+'button','開始')
