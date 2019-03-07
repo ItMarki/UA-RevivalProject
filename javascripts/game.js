@@ -1115,16 +1115,16 @@ function exportSave() {
 }
 
 function importSave() {
-	var input=prompt('Copy and paste in your exported file and press enter.')
+	var input=prompt('複製和貼上你的導出存檔，然後按Enter。')
 	if (load(input)) {
 		if (input!=null) {
-			alert('Your save was invalid or caused a game-breaking bug. :(')
+			alert('你的存檔無效，或者導致一個破壞遊戲的錯誤。 :(')
 		}
 	}
 }
 
 function reset(tier,challid=0,gain=1) {
-	if (tier==Infinity?confirm('If you hard reset, all progress in your save will be lost and you have to start over! Are you sure you want to do this?'):true) {
+	if (tier==Infinity?confirm('如果你重置，你存檔的全部進度會被遺失，而需要重新遊玩！你肯不肯定要這樣做？'):true) {
 		if (challid>0) {
 			switch (tier) {
 				case 3: if (challid==player.currentChallenge) {return} break;
@@ -1136,18 +1136,18 @@ function reset(tier,challid=0,gain=1) {
 					if (checkNotation=='Mixed') {
 						var checkNotation=getNotation(308)
 					}
-					if (!confirm('You need to '+((checkNotation=='Polynominal exponent'||checkNotation=='Color'||checkNotation=='Megacolor'||checkNotation=='Progress')?'go supernova':format(Number.MAX_VALUE)+' stars')+' with special conditions. Some supernova upgrades doesn\'t work while you are in a challenge.')) {return}
+					if (!confirm('你需要'+((checkNotation=='Polynominal exponent'||checkNotation=='Color'||checkNotation=='Megacolor'||checkNotation=='Progress')?'超新星':format(Number.MAX_VALUE)+'恆星')+'，含有特殊條件。當你在一個挑戰裏，有一些升級不能運作。')) {return}
 					break
 				case 4: 
 					var checkNotation=player.notation
 					if (checkNotation=='Mixed') {
 						var checkNotation=getNotation(308)
 					}
-					if (!confirm('You need to '+((checkNotation=='Polynominal exponent'||checkNotation=='Color'||checkNotation=='Megacolor'||checkNotation=='Progress')?'go hypernova':format(Number.MAX_VALUE)+' neutron stars')+' with special conditions.')) {return}
+					if (!confirm('你需要'+((checkNotation=='Polynominal exponent'||checkNotation=='Color'||checkNotation=='Megacolor'||checkNotation=='Progress')?'極超新星':format(Number.MAX_VALUE)+'中子星')+'，含有特殊條件。')) {return}
 					break
 			}
 			if (tier==3&&player.preSupernova) {
-				if (confirm('You can\'t enter a challenge while you are in pre-supernova mode. Entering a challenge will disable pre-supernova mode.')) player.preSupernova=false
+				if (confirm('當你在前超新星模式裏，不能進入一個挑戰。進入一個挑戰，將會禁止前超新星模式。')) player.preSupernova=false
 				else return
 			}
 		}
@@ -1445,17 +1445,17 @@ function toggle(id) {
 	}
 	if (id=='preSupernova') {
 		if (player.preSupernova) {
-			if (!confirm('Pre-supernova mode is where you start at the beginning even before your first supernova. Are you sure you want to do that?')) {
+			if (!confirm('前超新星模式是你在第一個超新星前的地方。你肯不肯定這樣做？')) {
 				player.preSupernova=false
 			} else if (player.currentChallenge==0) {
 				reset(3,0,0)
-			} else if (!confirm('If you start with pre-supernova mode on, you will exit the current challenge. Are you sure you want to do that?')) {
+			} else if (!confirm('如你在前超新星模式裏開始，你會退出現在的挑戰。你肯不肯定這樣做？')) {
 				player.preSupernova=false
 			} else {
 				reset(3,0,0)
 			}
 		} else {
-			if (!confirm('You are leaving pre-supernova mode. This will reenable any supernova features.')) player.preSupernova=true
+			if (!confirm('你在離開前超新星模式。這樣會重新開啓全部超新星特徵。')) player.preSupernova=true
 		}
 	}
 	if (id=='useMonospaced') updateFont()
