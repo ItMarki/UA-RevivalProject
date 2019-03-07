@@ -2879,7 +2879,7 @@ function gameTick() {
 						if (percentage<0) {
 							updateElement('prestigeProgress','<b>往聲望的進度</b>: 0.00%')
 						} else if (percentage>0.99995) {
-							if (pp>=500) updateElement('prestigeProgress','<b>往聲望的進度</b>: '+format(Decimal.add(player.prestigePower.div(gpp).log10(),0.01),2,0,false)+' OoM left')
+							if (pp>=500) updateElement('prestigeProgress','<b>往聲望的進度</b>: '+format(Decimal.add(player.prestigePower.div(gpp).log10(),0.01),2,0,false)+'剩餘的數量級')
 							else updateElement('prestigeProgress','<b>往聲望的進度</b>: 99.99%')
 						} else {
 							updateElement('prestigeProgress','<b>往聲望的進度</b>: '+Decimal.times(percentage,100).toFixed(2)+'%')
