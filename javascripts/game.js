@@ -3356,7 +3356,7 @@ function gameTick() {
 			}
 		}
 		if (SNTab=='autobuyers') {
-			var currentText='價格: '+formatTime(player.autobuyers.interval)+'<br>'
+			var currentText='間隔: '+formatTime(player.autobuyers.interval)+'<br>'
 			updateElement('interval',currentText)
 			currentText=''
 			if (player.autobuyers.interval>0.05) {
