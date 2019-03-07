@@ -3093,7 +3093,7 @@ function gameTick() {
 			updateElement('urOption','刷新速度:<br>'+player.updateRate+' TPS')
 		}
 		updateElement('csOption','手機滑動:<br>'+(player.customScrolling?'開':'關'))
-		updateElement('exOption','解釋:<br>'+(player.explanations?'開':'關'))
+		updateElement('exOption','解釋(還沒完全翻譯):<br>'+(player.explanations?'開':'關'))
 		updateElement('msOption','使用等寬字體:<br>'+(player.useMonospaced?'開':'關'))
 		updateElement('opOption','離線進度:<br>'+(player.offlineProgress?'開':'關'))
 		updateElement('hkOption','快捷鍵:<br>'+(player.hotkeys?'開':'關'))
