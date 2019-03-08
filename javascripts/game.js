@@ -3090,7 +3090,7 @@ function gameTick() {
 		if (player.updateRate==Number.MAX_VALUE) {
 			updateElement('urOption','刷新速度:<br>無限')
 		} else {
-			updateElement('urOption','刷新速度:<br>'+player.updateRate+' TPS')
+			updateElement('urOption','刷新速度:<br>'+player.updateRate+'每秒的刻數')
 		}
 		updateElement('csOption','手機滑動:<br>'+(player.customScrolling?'開':'關'))
 		updateElement('exOption','解釋(還沒完全翻譯):<br>'+(player.explanations?'開':'關'))
