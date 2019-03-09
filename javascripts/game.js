@@ -2711,7 +2711,7 @@ function gameTick() {
 		}
 	}
 	if (showTooMuch) {
-		explainList.supernova='<b>Supernova</b><br>After the layers of reset called prestige and transfer; there is a third layer of reset called supernova.<br>You need to reach '+format(Number.MAX_VALUE)+' stars to get your first supernova. Every time you supernova, you will get a single neutron star which you can buy it for upgrades and more content.'
+		explainList.supernova='<b>超新星</b><br>在聲望和轉移的重置層次後；有第三曾重置，叫做超新星。<br>你需要到達'+format(Number.MAX_VALUE)+'恆星，才可以有第一個超新星、每一次超新星，你會獲得1中子星，可以購買升級和更多內容。'
 		if (tooMuch) {
 			updateElement('tooMuchMessage','由於一個恆星的溢滿，宇宙被毀滅。')
 			hideElement('notNow')
