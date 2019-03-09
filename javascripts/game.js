@@ -2742,7 +2742,7 @@ function gameTick() {
 		oldLayout=player.layout
 	}
 	if (player.stars.gte(Number.MAX_VALUE)&&!showTooMuch) {
-		explainList.supernova='<b>Supernova</b><br>After the layers of reset called prestige and transfer; there is a third layer of reset called supernova.<br>You need to reach '+format(Number.MAX_VALUE)+' stars to get your first supernova. Each time you supernova, you will get a single neutron star which you can buy it for upgrades and more content.'
+		explainList.supernova='<b>超新星</b><br>在聲望和轉移的重置層次後；有第三曾重置，叫做超新星。<br>你需要到達'+format(Number.MAX_VALUE)+'恆星，才可以有第一個超新星、每一次超新星，你會獲得1中子星，可以購買升級和更多內容。'
 		showElement('prestige3bl','table-cell')
 		updateElement('prestige3bl','超新星(爆炸恆星)，獲得<br>+'+format(getPostPrestigePoints(3))+'中子星。')
 		if (player.breakLimit) {
@@ -3125,7 +3125,7 @@ function gameTick() {
 		updateElement('slOption','格式(生產器):<br>二'+(player.layout==1?'行':'列'))
 	}
 	if (tab=='transfer') {
-		explainList.tupg7='<b>Transfer upgrade <span style="font-size:66.6%">#7</span></b><br>This upgrade will allow you to be able to prestige with 1% of your stars as without the upgrade, which is equal to '+format(1e37)+' stars.<br>Prestige power gain is increased slighty after buying this upgrade.'
+		explainList.tupg7='<b>轉移升級<span style="font-size:66.6%">7</span></b><br>這個升級允許你可以以1%的恆星聲望，就如沒有升級，等於'+format(1e37)+'恆星。<br>在購買這個升級後，聲望力量獲得數會稍稍增加。'
 		updateElement('tupg12button','成本: '+format(1000)+' 轉移點數')
 		updateElement('tupg13button','成本: '+format(3000)+' 轉移點數')
 		updateElement('tupg14button','成本: '+format(5000)+' 轉移點數')
