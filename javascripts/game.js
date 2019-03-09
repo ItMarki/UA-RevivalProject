@@ -2595,7 +2595,7 @@ function gameTick() {
 	} else {
 		updateElement('sPS',format(pps[0],(pps[0].gte(1e3))?2:1,0,false))
 		enableTooltip('sPSExplanation')
-		updateTooltip('sPSExplanation',(player.explanations?explainList.growthRate+'<br>':'')+'Growth rate: '+format(pps[0].div(player.stars).times(100),2,0,false)+'%')
+		updateTooltip('sPSExplanation',(player.explanations?explainList.growthRate+'<br>':'')+'生長率: '+format(pps[0].div(player.stars).times(100),2,0,false)+'%')
 	}
     if (player.supernovaTabsUnlocked>4) {
 		showElement('unstableStars','block')
