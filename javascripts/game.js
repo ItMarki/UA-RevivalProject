@@ -242,8 +242,8 @@ function switchLayout() {
 function format(number,decimalPoints=2,offset=0,rounded=true) {
 	if (number.mantissa==undefined) number = new Decimal(number)
 	if (Number.isNaN(number.mantissa)) return '?'
-	if (number.lte(Number.NEGATIVE_INFINITY)) return '-&#x221e;'
-	if (number.gte(Number.POSITIVE_INFINITY)) return '&#x221e;'
+	if (number.lte(Number.NEGATIVE_INFINITY)) return '-無限;'
+	if (number.gte(Number.POSITIVE_INFINITY)) return '無限;'
 	var notationChoosed=player.notation
 	if (notationChoosed=='Mixed') {
 		notationChoosed=getNotation(number.exponent)
