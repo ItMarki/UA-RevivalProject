@@ -150,12 +150,12 @@ timeframes={年:31556952,
 notOnFocus=true
 notOnShift=1
 
-const haListU=['','天','地','玄','黃','宇','宙','洪','荒','日']
-const haListT=['','月','盈','昃','辰','宿','列','張','寒','來']
-const haListH=['','暑','往','秋','收','冬','藏','閏','餘','成']
+const haListU=['','U','D','T','Q','Qi','S','Sp','O','N']
+const haListT=['','D','V','T','Q','Qi','S','Sp','O','N']
+const haListH=['','C','Dn','Tn','Qn','Qin','Sn','Spn','On','Nn']
 const haListUS=['','U','D','T','Q','P','S','H','O','N']
 const haListTS=['','D','V','T','Q','P','S','H','O','N']
-const haListT2=['','歲','律','召','調','陽']
+const haListT2=['','MI','MC','NA','PC','FM']
 const haListT2S=['','m','u','n','p','f']
 const letters='abcdefghijklmnopqrstuvwxyz'
 const colors=[[0.9,0,0],[0,0.9,0],[0,0,0.9],[0.9,0.9,0],[0,0.9,0.9],[0.9,0,0.9],[0.45,0.45,0.45],[0.9,0.9,0.9],[0.1,0.1,0.1],[0.9,0.45,0]]
