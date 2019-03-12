@@ -242,8 +242,8 @@ function switchLayout() {
 function format(number,decimalPoints=2,offset=0,rounded=true) {
 	if (number.mantissa==undefined) number = new Decimal(number)
 	if (Number.isNaN(number.mantissa)) return '?'
-	if (number.lte(Number.NEGATIVE_INFINITY)) return '-無限;'
-	if (number.gte(Number.POSITIVE_INFINITY)) return '無限;'
+	if (number.lte(Number.NEGATIVE_INFINITY)) return '-&#x221e;'
+	if (number.gte(Number.POSITIVE_INFINITY)) return '&#x221e;'
 	var notationChoosed=player.notation
 	if (notationChoosed=='Mixed') {
 		notationChoosed=getNotation(number.exponent)
@@ -274,7 +274,7 @@ function format(number,decimalPoints=2,offset=0,rounded=true) {
 		if (exponent>99999) {
 			var exponentExponent=Math.floor(Math.log10(exponent))
 			var exponentMantissa=exponent/Math.pow(10,exponentExponent)
-			return (number.mantissa*Math.pow(10,offset*3)).toFixed(decimalPoints)+'乘十之'+exponentMantissa.toFixed(2)+'乘十之'+exponentExponent
+			return (number.mantissa*Math.pow(10,offset*3)).toFixed(decimalPoints)+'e'+exponentMantissa.toFixed(2)+'e'+exponentExponent
 		}
 		return (number.mantissa*Math.pow(10,offset*3)).toFixed(decimalPoints)+'e'+exponent
 	} else if (notationChoosed=='Engineering') {
@@ -285,23 +285,23 @@ function format(number,decimalPoints=2,offset=0,rounded=true) {
 			var exponentMantissa=exponent/Math.pow(10,exponentExponent)
 			var exponentRemainder=exponentExponent%3
 			exponentExponent-=exponentRemainder
-			return (number.mantissa*Math.pow(10,remainder+offset*3)).toFixed(Math.max(decimalPoints-remainder,0))+'乘十之'+(exponentMantissa*Math.pow(10,exponentRemainder)).toFixed(2-exponentRemainder)+'乘十之'+exponentExponent
+			return (number.mantissa*Math.pow(10,remainder+offset*3)).toFixed(Math.max(decimalPoints-remainder,0))+'e'+(exponentMantissa*Math.pow(10,exponentRemainder)).toFixed(2-exponentRemainder)+'e'+exponentExponent
 		}
-		return (number.mantissa*Math.pow(10,remainder+offset*3)).toFixed(Math.max(decimalPoints-remainder,0))+'乘十之'+exponent
+		return (number.mantissa*Math.pow(10,remainder+offset*3)).toFixed(Math.max(decimalPoints-remainder,0))+'e'+exponent
 	} else if (notationChoosed=='Logarithm') {
 		var log=number.log10()
 		if (log>=1e5) {
 			var logLog=Math.log10(log)
-			return '乘十之十之'+logLog.toFixed(2)
+			return 'ee'+logLog.toFixed(2)
 		}
 		return 'e'+log.toFixed(decimalPoints)
 	} else if (notationChoosed=='Natural logarithm') {
 		var log=number.log(2.718281828459045)
 		if (log>=1e5) {
 			var logLog=Math.log10(log)*2.30258509
-			return '自然對數<sup>自然對數^'+logLog.toFixed(2)+'</sup>'
+			return 'e<sup>e^'+logLog.toFixed(2)+'</sup>'
 		}
-		return '自然對數^'+log.toFixed(decimalPoints)
+		return 'e^'+log.toFixed(decimalPoints)
 	} else if (notationChoosed=='Repoalphabet') {
 		var abbid=Math.floor(number.exponent/3)-offset
 		var remainder=number.exponent%3
@@ -312,9 +312,9 @@ function format(number,decimalPoints=2,offset=0,rounded=true) {
 			var log=number.log10()
 			var logExponent=Math.floor(Math.log10(log))
 			var logMantissa=log*Math.pow(0.1,logExponent)
-			return logMantissa.toFixed(2)+'乘十之'+logExponent+'二層'
+			return logMantissa.toFixed(2)+'E'+logExponent+'#2'
 		}
-		return (number.mantissa*Math.pow(10,offset*3)).toFixed(decimalPoints)+'乘十之'+exponent
+		return (number.mantissa*Math.pow(10,offset*3)).toFixed(decimalPoints)+'e'+exponent
 	} else if (notationChoosed=='Original') {
 		var abbid=Math.floor(number.exponent/3)-offset
 		var remainder=number.exponent%3
@@ -330,19 +330,19 @@ function format(number,decimalPoints=2,offset=0,rounded=true) {
 		var logLog=Math.floor(Math.log10(log))
 		if (logLog>6) {
 			logLog=logLog/maxValueLog
-			return '無限<sup>無限^'+logLog.toFixed(6)+'</sup>'
+			return '&#x221e;<sup>&#x221e;^'+logLog.toFixed(6)+'</sup>'
 		}
 		return '&#x221e;^'+log.toFixed(Math.min(6-logLog,4))
 	} else if (notationChoosed=='Square exponent') {
 		var srLog=Math.sqrt(number.log10())
 		if (srLog>=1e5) {
 			var srLogLog=Math.sqrt(Math.log10(srLog))
-			return '乘十之(乘十之('+srLogLog.toFixed(4)+'之方)之方)'
+			return 'e(e('+srLogLog.toFixed(4)+'^2)^2)'
 		}
-		return '乘十之('+srLog.toFixed(decimalPoints*2)+'之方)'
+		return 'e('+srLog.toFixed(decimalPoints*2)+'^2)'
 	} else if (notationChoosed=='Polynominal exponent') {
 		var peLog=Math.log10(number.log10())/maxValueLogLog
-		return '10<sup>log<sub>10</sub>(無限)^'+peLog.toFixed(4)+'</sup>'
+		return '10<sup>log<sub>10</sub>(&#x221e;)^'+peLog.toFixed(4)+'</sup>'
 	} else if (notationChoosed=='Color') {
 		var abbid=Math.floor(number.exponent/3)-offset
 		var remainder=number.exponent%3
