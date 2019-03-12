@@ -574,10 +574,10 @@ function abbreviation(label) {
 	abbFull=''
 	
 	if (label==0) {
-		return 'k'
+		return '千'
 	}
 	if (label==1) {
-		return 'M'
+		return '多'
 	}
 	do {
 		var u=Math.floor(label)%10
@@ -587,7 +587,7 @@ function abbreviation(label) {
 		
 		if (u>0&&!(u==1&&t==0&&h==0&&step>0)) {
 			if (u==2&&t==0) {
-				abb='B'
+				abb='大'
 			} else {
 				abb=haListU[u]
 			}
@@ -595,7 +595,7 @@ function abbreviation(label) {
 		if (t>0) {
 			abb=abb+haListT[t]
 			if (u==0&&t>1) {
-				abb=abb+'g'
+				abb=abb+''
 			}
 		}
 		if (h>0) {
@@ -606,7 +606,7 @@ function abbreviation(label) {
 			if (abbFull=='') {
 				abbFull=abb+highAbb+abbFull
 			} else {
-				abbFull=abb+highAbb+'-'+abbFull
+				abbFull=abb+highAbb+'，'+abbFull
 			}
 		}
 		label=label/1000
@@ -622,10 +622,10 @@ function abbreviationShort(label) {
 	abbFull=''
 	
 	if (label==0) {
-		return 'k'
+		return 'ㄑ'
 	}
 	if (label==1) {
-		return 'M'
+		return 'ㄉㄨㄛ'
 	}
 	do {
 		var u=Math.floor(label)%10
@@ -635,7 +635,7 @@ function abbreviationShort(label) {
 		
 		if (u>0&&!(u==1&&t==0&&h==0&&step>0)) {
 			if (u==2&&t==0) {
-				abb='B'
+				abb='ㄉㄚ'
 			} else {
 				abb=haListUS[u]
 			}
@@ -643,16 +643,16 @@ function abbreviationShort(label) {
 		if (t>0) {
 			abb=abb+haListTS[t]
 			if (u==0&&t>2) {
-				abb=abb+'g'
+				abb=abb+''
 			}
 		}
 		if (h==1) {
-			abb=abb+'C'
+			abb=abb+''
 		}
 		if (h>1) {
 			abb=abb+haListTS[h]
 			if (((u!=2&&t==0)||(u==0&&t==1))&&h>1) {
-				abb=abb+'n'
+				abb=abb+''
 			}
 		}
 		highAbb=haListT2S[step]
