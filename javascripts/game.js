@@ -153,11 +153,11 @@ notOnShift=1
 const haListU=['','天','地','玄','黃','宇','宙','洪','荒','日']
 const haListT=['','月','盈','昃','辰','宿','列','張','寒','來']
 const haListH=['','暑','往','秋','收','冬','藏','閏','餘','成']
-const haListUS=['','U','D','T','Q','P','S','H','O','N']
-const haListTS=['','D','V','T','Q','P','S','H','O','N']
+const haListUS=['','ㄊㄢ','ㄉ','ㄒ','ㄏㄨ','ㄩ','ㄓㄡ','ㄏㄥ','ㄏㄤ','ㄖ']
+const haListTS=['','ㄩㄝ','ㄧㄥ','ㄗ','ㄔ','ㄙㄛ','ㄌㄧ','ㄓㄤ','ㄏㄤ','ㄌㄞ']
 const haListT2=['','歲','律','召','調','陽']
-const haListT2S=['','m','u','n','p','f']
-const letters='abcdefghijklmnopqrstuvwxyz'
+const haListT2S=['','ㄙㄟ','ㄌㄩ','ㄓㄠ','ㄊㄠ','ㄧㄤ']
+const letters='天地玄黃宇宙洪荒日月盈昃辰宿列張寒來暑往秋收冬藏閏餘'
 const colors=[[0.9,0,0],[0,0.9,0],[0,0,0.9],[0.9,0.9,0],[0,0.9,0.9],[0.9,0,0.9],[0.45,0.45,0.45],[0.9,0.9,0.9],[0.1,0.1,0.1],[0.9,0.45,0]]
 
 costs={tiers:[],tupgs:[6,1,3,10,15,25,35,50,100,250,500,1000,3000,5000],snupgs:[1,15,300,1,1,1,2,2,3,4,5,6,8,9,10,12,1e55,1e70,1e85,1e100,1e110,1e120,1e135,1e150,1e165,1e180],intReduceCost:1,bisfeatures:[3000,5000,7500,10000,1e5,1e6,1e4,1e9],bbCost:1000,ppHeadstartUpgs:[],neutronBoosts:[0,0,0,0,0],neutronTiers:[],destabilization:[0,0,0,1e45]}
