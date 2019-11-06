@@ -104,8 +104,8 @@ milestoneRequirements=['購買你第一個第一級生產器','購買你第一�
 	'購買8轉移升級','購買12轉移升級','購買14轉移升級','第一次超新星','購買2超新星升級','購買4超新星升級','購買8超新星升級','購買12超新星升級','總共獲得100中子星','解鎖挑戰',
 	'完成1個挑戰','完成2個挑戰','完成4個挑戰','完成8個挑戰','完成12個挑戰','最大全部自動購買升級','購買1個購購商店特徵','購買2個購購商店特徵','購買4個購購商店特徵','破裂限制！',
 	'購買全部購購商店特徵','到達5中子加成冪','到達10中子加成冪','到達20中子加成冪','購買你第一個中子第一級生產器','購買你第一個中子第二級生產器','購買你第一個中子第三級生產器','購買你第一個中子第五級生產器','購買你第一個中子第八級生產器','購買你第一個中子第十級生產器']
-storyMessages=['準備早餐！','對不起，但是這套早餐屬於你—等等……','我們的家被外星人侵略！噢不，我們要做一些東西！','快點，穿你的衣服，然後跟你的家長去！','呼，好險。我們要去侵略我們的星球。','我們到達了機場，來到火箭飛！','我們就在這裏。我可以控制火箭，如果我是主人。','就是這個，穿你的太空衣。','發射！我們要去侵略我們的星球！','噢，星星很亮。等一下……我看到的，有很多星星。是誰做的？',
-	'產生星星的人，一定是恆星之神。','噢不！我們最喜歡的星星都不見了！我該怎麼做？！','等一下，這個人，什麼都可以產生！他都可以重造我們最喜歡的星星！','準備……我們現在襲擊侵掠我們的地方！']
+storyMessages=['準備早餐！','對不起，但是這套早餐屬於你——等等……','我們的家被外星人侵略！噢不，我們要做一些東西！','快點，穿上你的衣服，然後跟你的家長去！','呼，好險。我們要去侵略我們的星球。','我們到達了機場，來上火箭飛！','我們就在這裏。如果我是主人的話，我可以控制火箭','就這樣了，穿上你的太空衣。','發射！我們要去侵略我們的星球！','噢，星星很亮。等一下……我看到那裏，就有很多星星。是誰做的？',
+	'產生星星的人，一定是恆星之神。','噢不！我們最喜歡的星星都不見了！我該怎麼做？！','等一下，這個人，什麼都可以產生！他重造我們最喜歡的星星一定很棒！','準備……我們現在襲擊要侵略我們的地方！']
 achList={names:['Speedrunner','I don\'t need those','What are you doing?','We can\'t show tier 11','Supernova Demon','Is the person Todd Rogers?','Do I really need to upgrade?','Challenge Speedway','Renewed Novas'],
 	requirements:['Supernova in 10 seconds without headstarts','Supernova in 90 seconds without autobuyers, hotkeys, and max all','Buy 40 tier 1 generators without having transfer upgrades nor prestige power','Buy 111 tier 10 generators but buy tier 9 generator once','Supernova without tiers 6-10','Supernova in 0.2 seconds without headstarts','Supernova without having transfer upgrades','Complete a challenge in under a second','Supernova while you are in pre-supernova mode']}
 explainList={stars:'<b>恆星</b><br>恆星是遊戲中的主要貨幣和貨幣部分。你可以以這個花費於生產器！',gens:'<b>生產器</b><br>生產器是遊戲中的生產部分。遊戲中有10級，一級會生產上一級，但第一級會生產恆星。<br>當你購買一個，那個生產器會有一個5%的加成。',prestige:'<b>聲望</b><br>聲望是一個<i>軟</i>重置，但你會保留一些特徵和內容。<br>在這個遊戲，如果你立即聲望，你會將生產器上有一個倍數加成。',transfer:'<b>轉移</b><br>轉移像聲望，但是會重置你全部的聲望，給予玩家升級，而不是生產力倍數。轉移的貨幣叫做轉移點數，使用它花費升級。',
