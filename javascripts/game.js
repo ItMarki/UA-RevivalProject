@@ -2711,7 +2711,7 @@ function gameTick() {
 		}
 	}
 	if (showTooMuch) {
-		explainList.supernova='<b>超新星</b><br>在聲望和轉移的重置層次後；有第三曾重置，叫做超新星。<br>你需要到達'+format(Number.MAX_VALUE)+'恆星，才可以有第一個超新星、每一次超新星，你會獲得1中子星，可以購買升級和更多內容。'
+		explainList.supernova='<b>超新星</b><br>在聲望和轉移的重置層次後；有第三層重置，叫做超新星。<br>你需要到達'+format(Number.MAX_VALUE)+'恆星，才可以有第一個超新星、每一次超新星，你會獲得1中子星，可以購買升級和更多內容。'
 		if (tooMuch) {
 			updateElement('tooMuchMessage','由於一個恆星的溢滿，宇宙被毀滅。')
 			hideElement('notNow')
@@ -2742,7 +2742,7 @@ function gameTick() {
 		oldLayout=player.layout
 	}
 	if (player.stars.gte(Number.MAX_VALUE)&&!showTooMuch) {
-		explainList.supernova='<b>超新星</b><br>在聲望和轉移的重置層次後；有第三曾重置，叫做超新星。<br>你需要到達'+format(Number.MAX_VALUE)+'恆星，才可以有第一個超新星、每一次超新星，你會獲得1中子星，可以購買升級和更多內容。'
+		explainList.supernova='<b>超新星</b><br>在聲望和轉移的重置層次後；有第三層重置，叫做超新星。<br>你需要到達'+format(Number.MAX_VALUE)+'恆星，才可以有第一個超新星、每一次超新星，你會獲得1中子星，可以購買升級和更多內容。'
 		showElement('prestige3bl','table-cell')
 		updateElement('prestige3bl','超新星(爆炸恆星)，獲得<br>+'+format(getPostPrestigePoints(3))+'中子星。')
 		if (player.breakLimit) {
