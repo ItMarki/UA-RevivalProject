@@ -150,13 +150,13 @@ timeframes={年:31556952,
 notOnFocus=true
 notOnShift=1
 
-const haListU=['','U','D','T','Q','Qi','S','Sp','O','N']
-const haListT=['','D','V','T','Q','Qi','S','Sp','O','N']
-const haListH=['','C','Dn','Tn','Qn','Qin','Sn','Spn','On','Nn']
-const haListUS=['','U','D','T','Q','P','S','H','O','N']
-const haListTS=['','D','V','T','Q','P','S','H','O','N']
-const haListT2=['','MI','MC','NA','PC','FM']
-const haListT2S=['','m','u','n','p','f']
+const haListU=['','一','二','三','四','五','六','七','八','九']
+const haListT=['','甲','乙','丙','丁','戊','己','庚','辛','壬']
+const haListH=['','子','丑','寅','卯','辰','巳','午','未','申']
+const haListUS=['','一','二','三','四','五','六','七','八','九']
+const haListTS=['','甲','乙','丙','丁','戊','己','庚','辛','壬']
+const haListT2=['','毫','微','納','皮','飛']
+const haListT2S=['','毫','微','納','皮','飛']
 const letters='abcdefghijklmnopqrstuvwxyz'
 const colors=[[0.9,0,0],[0,0.9,0],[0,0,0.9],[0.9,0.9,0],[0,0.9,0.9],[0.9,0,0.9],[0.45,0.45,0.45],[0.9,0.9,0.9],[0.1,0.1,0.1],[0.9,0.45,0]]
 
